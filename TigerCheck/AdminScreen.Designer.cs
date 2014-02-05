@@ -57,6 +57,7 @@
             this.checkInButton.TabIndex = 1;
             this.checkInButton.Text = "Check-In ";
             this.checkInButton.UseVisualStyleBackColor = true;
+            this.checkInButton.Click += new System.EventHandler(this.checkInButton_Click);
             // 
             // checkOutButton
             // 
@@ -67,6 +68,7 @@
             this.checkOutButton.TabIndex = 2;
             this.checkOutButton.Text = "Check-Out";
             this.checkOutButton.UseVisualStyleBackColor = true;
+            this.checkOutButton.Click += new System.EventHandler(this.checkOutButton_Click);
             // 
             // currentSessionNoChange
             // 

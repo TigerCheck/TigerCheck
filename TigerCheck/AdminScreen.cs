@@ -86,12 +86,64 @@ ________________________________________________________________
         private void newSessionButton_Click(object sender, EventArgs e)
         {
 
-            //Open the newSessionScreen
-            Form newSessionForm = new newSessionScreen();
-            newSessionForm.MdiParent = this
+            //Make a new instance of newSessionScreen and show it
+            Form newSessionFormInstance = new newSessionScreen();
+            newSessionFormInstance.Show();
+
 
 
             
+
+        }
+
+
+/*
+________________________________________________________________
+checkInButton_Click
+Date Last Modified: 2/5/2014
+Name: Ethan Darby
+         
+Functionality: This function opens checkInScreen.
+
+Parameters: None
+
+Returns: None
+
+Important notes:
+________________________________________________________________
+*/
+
+        private void checkInButton_Click(object sender, EventArgs e)
+        {
+            //Make a new instance of checkInScreen and show it
+            Form checkInFormInstance = new checkInScreen();
+            checkInFormInstance.Show();
+
+        }
+
+
+
+/*
+________________________________________________________________
+checkOutButton_Click
+Date Last Modified: 2/5/2014
+Name: Ethan Darby
+         
+Functionality: This function opens checkOutScreen.
+
+Parameters: None
+
+Returns: None
+
+Important notes:
+________________________________________________________________
+*/
+
+        private void checkOutButton_Click(object sender, EventArgs e)
+        {
+            //Make a new instance of checkOutScren and show it
+            Form CheckOutScreenInstance = new checkOutScreen();
+            CheckOutScreenInstance.Show();
 
         }
 

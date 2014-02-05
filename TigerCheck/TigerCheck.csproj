@@ -46,16 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HomeScreen.cs">
+    <Compile Include="AdminScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeScreen.Designer.cs">
-      <DependentUpon>HomeScreen.cs</DependentUpon>
+    <Compile Include="AdminScreen.Designer.cs">
+      <DependentUpon>AdminScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckInScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckInScreen.Designer.cs">
+      <DependentUpon>CheckInScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOutScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOutScreen.Designer.cs">
+      <DependentUpon>CheckOutScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewSessionScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewSessionScreen.Designer.cs">
+      <DependentUpon>NewSessionScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="HomeScreen.resx">
-      <DependentUpon>HomeScreen.cs</DependentUpon>
+    <EmbeddedResource Include="AdminScreen.resx">
+      <DependentUpon>AdminScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckInScreen.resx">
+      <DependentUpon>CheckInScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOutScreen.resx">
+      <DependentUpon>CheckOutScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewSessionScreen.resx">
+      <DependentUpon>NewSessionScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
