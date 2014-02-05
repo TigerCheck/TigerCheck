@@ -69,6 +69,7 @@
             this.Name = "checkOutScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Check-Out ";
+            this.Load += new System.EventHandler(this.checkOutScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

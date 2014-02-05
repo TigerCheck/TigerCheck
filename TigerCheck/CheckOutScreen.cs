@@ -15,5 +15,10 @@ namespace TigerCheck
         {
             InitializeComponent();
         }
+
+        private void checkOutScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
