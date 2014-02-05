@@ -10,3 +10,5 @@ C:\Users\Ethan Darby\documents\visual studio 2010\Projects\TigerCheck\TigerCheck
 C:\Users\Ethan Darby\documents\visual studio 2010\Projects\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.checkInScreen.resources
 C:\Users\Ethan Darby\documents\visual studio 2010\Projects\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.checkOutScreen.resources
 C:\Users\Ethan Darby\documents\visual studio 2010\Projects\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.newSessionScreen.resources
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.exe
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.pdb
