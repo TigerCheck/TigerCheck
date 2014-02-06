@@ -1,31 +1,41 @@
-﻿//CheckInScreen.cs
-//Date Created: 2/5/2014
-//Date Last Modified: 2/5/2014
-//Author of Last Change: Ethan Darby
-//
-//Function: CheckInScreen is called when the Check-In button is clicked from the mains creen. It is a form where the user enters data pertinent to the patient. Thet get general
-//      information and assign them a barcode. When they click submit, the forms are checked and validated before then sending it to the SQL server.
-//
-//Important Notes: The SQL server code is not added here yet, still needs to be done.
-//
-//
+﻿/*
+-----------------------------------------------------------------------------
+CheckInScreen.cs
+Date Created: 2/5/2014
+Date Last Modified: 2/5/2014
+Author of Last Change: Ethan Darby
+
+Function: CheckInScreen is called when the Check-In button is clicked from the mains creen. It is a form where the user enters data pertinent to the patient. Thet get general
+      information and assign them a barcode. When they click submit, the forms are checked and validated before then sending it to the SQL server.
+
+Important Notes: Right now I am using a "hardcoded" sql connection instance at the top, using the PatientRecordsDataSet would be ideal here instead. But I am trying to get
+      a working baseline as soon as possible. THIS NEEDS TO BE CHANGED ASAP AND NOT REPLICATED ANYWHERE ELSE
+-----------------------------------------------------------------------------
+*/
 
 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using TigerCheck.TigerCheckProductionDataSetTableAdapters;
 
 namespace TigerCheck
 {
     public partial class checkInScreen : Form
     {
+        //new SQL Connection object
+        SqlConnection _patientRecordsConnection = new SqlConnection("Data Source=tcp:172.17.72.109;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
+
         public checkInScreen()
         {
+           
             InitializeComponent();
         }
 /*
@@ -76,7 +86,7 @@ ________________________________________________________________
 
 
 
-
+                addPatientToDatabase(firstName, lastName, age, sex, race, barcodeNumber);
                 this.Close();
 
             } 
@@ -108,6 +118,7 @@ ________________________________________________________________
             {
                 isValid = false;
                 MessageBox.Show("Please enter a value for every required field.");
+                return isValid;
             }
             
             //make sure that the age is in the required range
@@ -119,6 +130,7 @@ ________________________________________________________________
                     isValid = false;
                     MessageBox.Show("Age entered was out of range. Age must be greater than 0 and less than 120");
                     ageComboBox.Focus();
+                    return isValid;
                 }
             }
 
@@ -135,6 +147,7 @@ ________________________________________________________________
                     isValid = false;
                     MessageBox.Show("Barcode value is not a number!");
                     barcodeNumberTextbox.Focus();
+                    return isValid;
                 }
                 if (isNumber)
                 {
@@ -143,6 +156,7 @@ ________________________________________________________________
                         isValid = false;
                         MessageBox.Show("Barcode Value is less than 0 or greater than 4 digits long");
                         barcodeNumberTextbox.Focus();
+                        return isValid;
                     }
 
 
@@ -154,10 +168,66 @@ ________________________________________________________________
             {
                 isValid = false;
                 MessageBox.Show("No button selected for sex of the patient");
+                return isValid;
             }
             return isValid;
     
         }
+
+
+/*
+________________________________________________________________
+addPatientToDatabse
+Date Last Modified: 2/6/2014
+Name: Ethan Darby
+
+Functionality: After the submit button has been pressed and the values have been verified/analyzed, this function is called to commit the values
+                to the database. 
+
+Parameters: The values from the text boxes, buttons, and combo boxes are passed. 
+
+Returns: A true or false value is returned, indicicating whether or not the value was added to the database. A false value would indicated some value was wrong, the connection was lost, or something had failed.
+
+Important notes: 
+________________________________________________________________
+*/
+
+        private bool addPatientToDatabase(string firstNameIn, string lastNameIn, int ageIn, string sexIn, string raceIn, int barcodeIn)
+        {
+
+            TigerCheckProductionDataSet dataSetInstance = new TigerCheckProductionDataSet();
+            TigerCheckProductionDataSet.patientRecordsRow myNewRow = dataSetInstance.patientRecords.NewpatientRecordsRow();
+
+           
+            myNewRow.Age = ageIn;
+            myNewRow.ID_Num = barcodeIn;
+
+            dataSetInstance.patientRecords.AddpatientRecordsRow(myNewRow);
+
+            dataSetInstance.AcceptChanges();
+            
+            MessageBox.Show(Convert.ToString(dataSetInstance.patientRecords.Count));
+     
+            /*
+            //Make a command to check if the record exists befor inserting, otherwise may overwrite
+            //This scenario could occur should the user try to check in the same child twice.
+            SqlCommand doesItExist = new SqlCommand("SQLTEXTHERE", _patientRecordsConnection);
+
+            //add the parameters to the doesItExist command
+            doesItExist.Parameters.AddWithValue("@firstName", firstNameIn);
+            doesItExist.Parameters.AddWithValue("@lastName", lastNameIn);
+            doesItExist.Parameters.AddWithValue("@age", ageIn);
+            doesItExist.Parameters.AddWithValue("@sex", sexIn);
+            doesItExist.Parameters.AddWithValue("@race", raceIn);
+            doesItExist.Parameters.AddWithValue("@barcode", barcodeIn);
+
+            //execute the doesItExist command, should return a 1 or 0 if it finds one or not
+            int doesItExistResult = doesItExist.ExecuteNonQuery();
+
+            */
+            return true;
+        }
+
 
     }
 }

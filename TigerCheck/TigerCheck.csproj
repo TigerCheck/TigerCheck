@@ -70,6 +70,10 @@
     <Compile Include="NewSessionScreen.Designer.cs">
       <DependentUpon>NewSessionScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="PatientRecordsDataSet.cs">
+      <DependentUpon>PatientRecordsDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PatientRecordsDataSet.Designer.cs">

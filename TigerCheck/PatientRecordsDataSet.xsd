@@ -38,7 +38,7 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT ID_Num, Unique_Identifier, Age, Sex, Race, Blood_Pressure, Heart_Rate, Height, Weight, BMI, Lungs, Dental, Vision, Cholesterol, Blood_Sugar, Ears, Throat, Nose, Heart, Scoliosis FROM dbo.patientRecords</CommandText>
                     <Parameters />
                   </DbCommand>
