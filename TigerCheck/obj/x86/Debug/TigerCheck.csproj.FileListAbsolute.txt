@@ -24,3 +24,15 @@ C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerC
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.Properties.Resources.resources
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck.exe.config
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.exe
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.pdb
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck.exe
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck.pdb
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.csprojResolveAssemblyReference.cache
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.AdminScreen.resources
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.checkInScreen.resources
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.checkOutScreen.resources
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.newSessionScreen.resources
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.Properties.Resources.resources
+C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.csproj.GenerateResource.Cache

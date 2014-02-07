@@ -201,8 +201,8 @@ ________________________________________________________________
         private bool addPatientToDatabase(string firstNameIn, string lastNameIn, int ageIn, string sexIn, string raceIn, int barcodeIn)
         {
 
-            
-     
+            SqlConnection connection = new SqlConnection("Data Source=tcp:172.17.72.109;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
+
             /*
             //Make a command to check if the record exists befor inserting, otherwise may overwrite
             //This scenario could occur should the user try to check in the same child twice.
@@ -220,6 +220,29 @@ ________________________________________________________________
             int doesItExistResult = doesItExist.ExecuteNonQuery();
 
             */
+
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = "INSERT INTO PatientRecords (firstname) VALUES (?firstname)";
+            command.Parameters.AddWithValue("?firstname", firstNameIn);
+
+            command.CommandText = "INSERT INTO PatientRecords (lastname) VALUES (?lastname)";
+            command.Parameters.AddWithValue("?lastname", firstNameIn);
+
+            command.CommandText = "INSERT INTO PatientRecords (age) VALUES (?age)";
+            command.Parameters.AddWithValue("?age", ageIn);
+
+            command.CommandText = "INSERT INTO PatientRecords (sex) VALUES (?sex)";
+            command.Parameters.AddWithValue("?sex", sexIn);
+
+            command.CommandText = "INSERT INTO PatientRecords (race) VALUES (?race)";
+            command.Parameters.AddWithValue("?race", raceIn);
+
+            command.CommandText = "INSERT INTO PatientRecords (barcode) VALUES (?barcode)";
+            command.Parameters.AddWithValue("?barcode", barcodeIn);
+
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
             return true;
         }
 
