@@ -88,18 +88,9 @@ ________________________________________________________________
 
             //Make a new instance of newSessionScreen and show it
             Form newSessionFormInstance = new newSessionScreen();
-
-            //disable everything on this window until the user has finished with the new session window
-            newSessionButton.Enabled = false;
-            checkInButton.Enabled = false;
-            checkOutButton.Enabled = false;
-
-            //If you don't refresh the form then you won't see any of the changes. The property is set, 
-            //but the current intance of the form will be out of date
-            this.Refresh();
-
-            newSessionFormInstance.Show();
-            newSessionFormInstance.TopMost = true;
+            
+            newSessionFormInstance.Show(this);
+            //newSessionFormInstance.TopMost = true;
             
 
         }

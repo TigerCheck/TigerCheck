@@ -70,9 +70,8 @@ ________________________________________________________________
                 firstName = firstNameTextBox.Text;
                 lastName = lastNameTextBox.Text;
                 race = raceComboBox.Text;
-                age = Convert.ToInt32(ageComboBox.Text);
+                age = (int)Convert.ToDecimal(ageComboBox.Text); //Got a work around in place by converting it into a float then dropping the decimal
                 barcodeNumber = Convert.ToInt32(barcodeNumberTextbox.Text);
-                
                 //Check the radio buttons to see what is selected and then store it
                 if (maleRadioButton.Checked)
                 {
@@ -124,11 +123,19 @@ ________________________________________________________________
             //make sure that the age is in the required range
             if (ageComboBox.Text != string.Empty)
             {
-                int valueOfAgeComboBox = Convert.ToInt32(ageComboBox.Text);
+                int valueOfAgeComboBox = 0;
+                try
+                {
+                    valueOfAgeComboBox = Convert.ToInt32(ageComboBox.Text);
+                }
+                catch(FormatException error)
+                {
+                    valueOfAgeComboBox = -1;
+                }
                 if (valueOfAgeComboBox > 120 || valueOfAgeComboBox < 1)
                 {
                     isValid = false;
-                    MessageBox.Show("Age entered was out of range. Age must be greater than 0 and less than 120");
+                    MessageBox.Show("Age entered was out of range or is invalid. Age must be greater than 0 and less than 120");
                     ageComboBox.Focus();
                     return isValid;
                 }
@@ -158,7 +165,6 @@ ________________________________________________________________
                         barcodeNumberTextbox.Focus();
                         return isValid;
                     }
-
 
                 }
             }
@@ -195,18 +201,7 @@ ________________________________________________________________
         private bool addPatientToDatabase(string firstNameIn, string lastNameIn, int ageIn, string sexIn, string raceIn, int barcodeIn)
         {
 
-            TigerCheckProductionDataSet dataSetInstance = new TigerCheckProductionDataSet();
-            TigerCheckProductionDataSet.patientRecordsRow myNewRow = dataSetInstance.patientRecords.NewpatientRecordsRow();
-
-           
-            myNewRow.Age = ageIn;
-            myNewRow.ID_Num = barcodeIn;
-
-            dataSetInstance.patientRecords.AddpatientRecordsRow(myNewRow);
-
-            dataSetInstance.AcceptChanges();
             
-            MessageBox.Show(Convert.ToString(dataSetInstance.patientRecords.Count));
      
             /*
             //Make a command to check if the record exists befor inserting, otherwise may overwrite

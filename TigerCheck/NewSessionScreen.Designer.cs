@@ -33,7 +33,6 @@
             this.countyComboBox = new System.Windows.Forms.ComboBox();
             this.schoolComboBox = new System.Windows.Forms.ComboBox();
             this.heightAndWeightCheckBox = new System.Windows.Forms.CheckBox();
-            this.newSessionCallendar = new System.Windows.Forms.MonthCalendar();
             this.bloodPressureCheckBox = new System.Windows.Forms.CheckBox();
             this.cholesterolCheckBox = new System.Windows.Forms.CheckBox();
             this.bloodSugarCheckBox = new System.Windows.Forms.CheckBox();
@@ -42,6 +41,12 @@
             this.heartCheckBox = new System.Windows.Forms.CheckBox();
             this.lungsCheckBox = new System.Windows.Forms.CheckBox();
             this.selectStationsLabel = new System.Windows.Forms.Label();
+            this.createNewSessionButton = new System.Windows.Forms.Button();
+            this.dentalCheckBox = new System.Windows.Forms.CheckBox();
+            this.earsCheckBox = new System.Windows.Forms.CheckBox();
+            this.throatCheckBox = new System.Windows.Forms.CheckBox();
+            this.noseCheckBox = new System.Windows.Forms.CheckBox();
+            this.scoliosisCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // countyLabel
@@ -90,12 +95,6 @@
             this.heightAndWeightCheckBox.TabIndex = 4;
             this.heightAndWeightCheckBox.Text = "Height and Weight";
             this.heightAndWeightCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // newSessionCallendar
-            // 
-            this.newSessionCallendar.Location = new System.Drawing.Point(439, 18);
-            this.newSessionCallendar.Name = "newSessionCallendar";
-            this.newSessionCallendar.TabIndex = 5;
             // 
             // bloodPressureCheckBox
             // 
@@ -156,7 +155,7 @@
             // 
             this.heartCheckBox.AutoSize = true;
             this.heartCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.heartCheckBox.Location = new System.Drawing.Point(57, 302);
+            this.heartCheckBox.Location = new System.Drawing.Point(57, 301);
             this.heartCheckBox.Name = "heartCheckBox";
             this.heartCheckBox.Size = new System.Drawing.Size(68, 24);
             this.heartCheckBox.TabIndex = 11;
@@ -184,12 +183,83 @@
             this.selectStationsLabel.TabIndex = 13;
             this.selectStationsLabel.Text = "Select Stations:";
             // 
+            // createNewSessionButton
+            // 
+            this.createNewSessionButton.Location = new System.Drawing.Point(57, 395);
+            this.createNewSessionButton.Name = "createNewSessionButton";
+            this.createNewSessionButton.Size = new System.Drawing.Size(341, 23);
+            this.createNewSessionButton.TabIndex = 14;
+            this.createNewSessionButton.Text = "Create New Session";
+            this.createNewSessionButton.UseVisualStyleBackColor = true;
+            this.createNewSessionButton.Click += new System.EventHandler(this.createNewSessionButton_Click);
+            // 
+            // dentalCheckBox
+            // 
+            this.dentalCheckBox.AutoSize = true;
+            this.dentalCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dentalCheckBox.Location = new System.Drawing.Point(57, 340);
+            this.dentalCheckBox.Name = "dentalCheckBox";
+            this.dentalCheckBox.Size = new System.Drawing.Size(75, 24);
+            this.dentalCheckBox.TabIndex = 15;
+            this.dentalCheckBox.Text = "Dental";
+            this.dentalCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // earsCheckBox
+            // 
+            this.earsCheckBox.AutoSize = true;
+            this.earsCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.earsCheckBox.Location = new System.Drawing.Point(262, 340);
+            this.earsCheckBox.Name = "earsCheckBox";
+            this.earsCheckBox.Size = new System.Drawing.Size(61, 24);
+            this.earsCheckBox.TabIndex = 16;
+            this.earsCheckBox.Text = "Ears";
+            this.earsCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // throatCheckBox
+            // 
+            this.throatCheckBox.AutoSize = true;
+            this.throatCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.throatCheckBox.Location = new System.Drawing.Point(439, 259);
+            this.throatCheckBox.Name = "throatCheckBox";
+            this.throatCheckBox.Size = new System.Drawing.Size(74, 24);
+            this.throatCheckBox.TabIndex = 17;
+            this.throatCheckBox.Text = "Throat";
+            this.throatCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // noseCheckBox
+            // 
+            this.noseCheckBox.AutoSize = true;
+            this.noseCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noseCheckBox.Location = new System.Drawing.Point(439, 299);
+            this.noseCheckBox.Name = "noseCheckBox";
+            this.noseCheckBox.Size = new System.Drawing.Size(65, 24);
+            this.noseCheckBox.TabIndex = 18;
+            this.noseCheckBox.Text = "Nose";
+            this.noseCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // scoliosisCheckBox
+            // 
+            this.scoliosisCheckBox.AutoSize = true;
+            this.scoliosisCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoliosisCheckBox.Location = new System.Drawing.Point(439, 340);
+            this.scoliosisCheckBox.Name = "scoliosisCheckBox";
+            this.scoliosisCheckBox.Size = new System.Drawing.Size(90, 24);
+            this.scoliosisCheckBox.TabIndex = 19;
+            this.scoliosisCheckBox.Text = "Scoliosis";
+            this.scoliosisCheckBox.UseVisualStyleBackColor = true;
+            // 
             // newSessionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(684, 662);
+            this.Controls.Add(this.scoliosisCheckBox);
+            this.Controls.Add(this.noseCheckBox);
+            this.Controls.Add(this.throatCheckBox);
+            this.Controls.Add(this.earsCheckBox);
+            this.Controls.Add(this.dentalCheckBox);
+            this.Controls.Add(this.createNewSessionButton);
             this.Controls.Add(this.selectStationsLabel);
             this.Controls.Add(this.lungsCheckBox);
             this.Controls.Add(this.heartCheckBox);
@@ -198,7 +268,6 @@
             this.Controls.Add(this.bloodSugarCheckBox);
             this.Controls.Add(this.cholesterolCheckBox);
             this.Controls.Add(this.bloodPressureCheckBox);
-            this.Controls.Add(this.newSessionCallendar);
             this.Controls.Add(this.heightAndWeightCheckBox);
             this.Controls.Add(this.schoolComboBox);
             this.Controls.Add(this.countyComboBox);
@@ -219,7 +288,6 @@
         private System.Windows.Forms.ComboBox countyComboBox;
         private System.Windows.Forms.ComboBox schoolComboBox;
         private System.Windows.Forms.CheckBox heightAndWeightCheckBox;
-        private System.Windows.Forms.MonthCalendar newSessionCallendar;
         private System.Windows.Forms.CheckBox bloodPressureCheckBox;
         private System.Windows.Forms.CheckBox cholesterolCheckBox;
         private System.Windows.Forms.CheckBox bloodSugarCheckBox;
@@ -228,5 +296,11 @@
         private System.Windows.Forms.CheckBox heartCheckBox;
         private System.Windows.Forms.CheckBox lungsCheckBox;
         private System.Windows.Forms.Label selectStationsLabel;
+        private System.Windows.Forms.Button createNewSessionButton;
+        private System.Windows.Forms.CheckBox dentalCheckBox;
+        private System.Windows.Forms.CheckBox earsCheckBox;
+        private System.Windows.Forms.CheckBox throatCheckBox;
+        private System.Windows.Forms.CheckBox noseCheckBox;
+        private System.Windows.Forms.CheckBox scoliosisCheckBox;
     }
 }

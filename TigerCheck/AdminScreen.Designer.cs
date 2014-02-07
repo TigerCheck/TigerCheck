@@ -51,6 +51,7 @@
             // checkInButton
             // 
             this.checkInButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkInButton.Enabled = false;
             this.checkInButton.Location = new System.Drawing.Point(356, 239);
             this.checkInButton.Name = "checkInButton";
             this.checkInButton.Size = new System.Drawing.Size(184, 90);
@@ -62,6 +63,7 @@
             // checkOutButton
             // 
             this.checkOutButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkOutButton.Enabled = false;
             this.checkOutButton.Location = new System.Drawing.Point(573, 239);
             this.checkOutButton.Name = "checkOutButton";
             this.checkOutButton.Size = new System.Drawing.Size(184, 90);
@@ -73,6 +75,7 @@
             // currentSessionNoChange
             // 
             this.currentSessionNoChange.AutoSize = true;
+            this.currentSessionNoChange.Enabled = false;
             this.currentSessionNoChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentSessionNoChange.Location = new System.Drawing.Point(26, 29);
             this.currentSessionNoChange.Name = "currentSessionNoChange";
@@ -83,6 +86,7 @@
             // currentSessionLabel
             // 
             this.currentSessionLabel.AutoSize = true;
+            this.currentSessionLabel.Enabled = false;
             this.currentSessionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentSessionLabel.Location = new System.Drawing.Point(159, 29);
             this.currentSessionLabel.Name = "currentSessionLabel";
@@ -93,6 +97,7 @@
             // patientsInNoChange
             // 
             this.patientsInNoChange.AutoSize = true;
+            this.patientsInNoChange.Enabled = false;
             this.patientsInNoChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.patientsInNoChange.Location = new System.Drawing.Point(29, 56);
             this.patientsInNoChange.Name = "patientsInNoChange";
@@ -103,6 +108,7 @@
             // patientsInLabel
             // 
             this.patientsInLabel.AutoSize = true;
+            this.patientsInLabel.Enabled = false;
             this.patientsInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.patientsInLabel.Location = new System.Drawing.Point(135, 56);
             this.patientsInLabel.Name = "patientsInLabel";

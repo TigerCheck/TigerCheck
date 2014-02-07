@@ -51,6 +51,9 @@ ________________________________________________________________
             //This should be defaulted, but just in case we will force it to here. 
             barcodeTextBox.Focus();
 
+
+            //
+
         }
     }
 }

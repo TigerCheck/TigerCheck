@@ -1,0 +1,8 @@
+﻿2/7/2014
+
+ToDo:	Add submit button on newSessionScreen
+		Disable/hide buttons until new session created
+		Verify age, on CheckInScreen, is an int and not a float/double
+nonissue	Make sure barcodes are 4 digits long, add preceding zeroes if necessary (I forgot ints don't hold leading 0s regardless)
+
+		Handle checking out if nobody is checked in.
