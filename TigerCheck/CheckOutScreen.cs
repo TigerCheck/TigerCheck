@@ -40,7 +40,7 @@ Functionality: This function is called automatically when the checkOutScreen loa
 
 Parameters: No info being passed
 
-Returns: Nothing returned is returned, but it does hit the sql database and add a patient record
+Returns: Nothing is returned, but it does hit the sql database and add a patient record
 
 Important notes: This method is used to set things up as they should be for when the screen is loaded. 
 ________________________________________________________________

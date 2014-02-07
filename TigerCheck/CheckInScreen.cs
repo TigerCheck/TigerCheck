@@ -184,8 +184,8 @@ ________________________________________________________________
 /*
 ________________________________________________________________
 addPatientToDatabse
-Date Last Modified: 2/6/2014
-Name: Ethan Darby
+Date Last Modified: 2/7/2014
+Name: Zach White
 
 Functionality: After the submit button has been pressed and the values have been verified/analyzed, this function is called to commit the values
                 to the database. 
