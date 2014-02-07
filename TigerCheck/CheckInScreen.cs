@@ -222,11 +222,11 @@ ________________________________________________________________
             */
 
             SqlCommand command = connection.CreateCommand();
-            command.CommandText = "INSERT INTO PatientRecords (Firstname) VALUES (@Firstname)";
-            command.Parameters.AddWithValue("@Firstname", firstNameIn);
+            command.CommandText = "INSERT INTO PatientRecords (First_Name) VALUES (@First_Name)";
+            command.Parameters.AddWithValue("@First_Name", firstNameIn);
 
-            command.CommandText = "INSERT INTO PatientRecords (Lastname) VALUES (@Lastname)";
-            command.Parameters.AddWithValue("@Lastname", firstNameIn);
+            command.CommandText = "INSERT INTO PatientRecords (Lastname) VALUES (@Last_Name)";
+            command.Parameters.AddWithValue("@Last_Name", firstNameIn);
 
             command.CommandText = "INSERT INTO PatientRecords (Age) VALUES (@Age)";
             command.Parameters.AddWithValue("@Age", ageIn);
