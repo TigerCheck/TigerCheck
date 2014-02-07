@@ -2,11 +2,11 @@
 -----------------------------------------------------------------------------
 CheckInScreen.cs
 Date Created: 2/5/2014
-Date Last Modified: 2/5/2014
-Author of Last Change: Ethan Darby
+Date Last Modified: 2/7/2014
+Author of Last Change: Zach White
 
-Function: CheckInScreen is called when the Check-In button is clicked from the mains creen. It is a form where the user enters data pertinent to the patient. Thet get general
-      information and assign them a barcode. When they click submit, the forms are checked and validated before then sending it to the SQL server.
+Function: CheckInScreen is called when the Check-In button is clicked from the main screen. It is a form where the user enters data pertinent to the patient. They get general
+      information and assign them a barcode. When they click submit, the forms are checked and validated before sending it to the SQL server.
 
 Important Notes: Right now I am using a "hardcoded" sql connection instance at the top, using the PatientRecordsDataSet would be ideal here instead. But I am trying to get
       a working baseline as soon as possible. THIS NEEDS TO BE CHANGED ASAP AND NOT REPLICATED ANYWHERE ELSE
@@ -222,23 +222,23 @@ ________________________________________________________________
             */
 
             SqlCommand command = connection.CreateCommand();
-            command.CommandText = "INSERT INTO PatientRecords (firstname) VALUES (?firstname)";
-            command.Parameters.AddWithValue("?firstname", firstNameIn);
+            command.CommandText = "INSERT INTO PatientRecords (Firstname) VALUES (@Firstname)";
+            command.Parameters.AddWithValue("@Firstname", firstNameIn);
 
-            command.CommandText = "INSERT INTO PatientRecords (lastname) VALUES (?lastname)";
-            command.Parameters.AddWithValue("?lastname", firstNameIn);
+            command.CommandText = "INSERT INTO PatientRecords (Lastname) VALUES (@Lastname)";
+            command.Parameters.AddWithValue("@Lastname", firstNameIn);
 
-            command.CommandText = "INSERT INTO PatientRecords (age) VALUES (?age)";
-            command.Parameters.AddWithValue("?age", ageIn);
+            command.CommandText = "INSERT INTO PatientRecords (Age) VALUES (@Age)";
+            command.Parameters.AddWithValue("@Age", ageIn);
 
-            command.CommandText = "INSERT INTO PatientRecords (sex) VALUES (?sex)";
-            command.Parameters.AddWithValue("?sex", sexIn);
+            command.CommandText = "INSERT INTO PatientRecords (Sex) VALUES (@Sex)";
+            command.Parameters.AddWithValue("@Sex", sexIn);
 
-            command.CommandText = "INSERT INTO PatientRecords (race) VALUES (?race)";
-            command.Parameters.AddWithValue("?race", raceIn);
+            command.CommandText = "INSERT INTO PatientRecords (Race) VALUES (@Race)";
+            command.Parameters.AddWithValue("@Race", raceIn);
 
-            command.CommandText = "INSERT INTO PatientRecords (barcode) VALUES (?barcode)";
-            command.Parameters.AddWithValue("?barcode", barcodeIn);
+            command.CommandText = "INSERT INTO PatientRecords (Barcode) VALUES (@Barcode)";
+            command.Parameters.AddWithValue("@Barcode", barcodeIn);
 
             connection.Open();
             command.ExecuteNonQuery();
