@@ -20,6 +20,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace TigerCheck
 {
@@ -74,11 +75,12 @@ ________________________________________________________________
 
         private void checkOutStudent()
         {
+            SqlConnection _patientRecordsConnection = new SqlConnection("Data Source=tcp:172.17.72.109;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
             //Make a command to check if the record exists before checking the student out
             //This scenario could occur should the user try to check out the child if he/she is not checked in first
-            SqlCommand doesItExist = new SqlCommand("SQLTEXTHERE", _patientRecordsConnection);
+            SqlCommand doesItExist = new SqlCommand("IF EXISTS(SELECT 1 FROM TigerCheckProduction.dbo.PatientRecords WHERE [User_ID] = @barcode) Select 1 ELSE Select 0", _patientRecordsConnection);
 
-            doesItExist.Parameters.AddWithValue("@barcode", barcodeIn);
+            doesItExist.Parameters.AddWithValue("@barcode", barcodeTextBox.Text);
 
             _patientRecordsConnection.Open();
             //execute the doesItExist command, should return a 1 or 0 if it finds one or not
@@ -88,13 +90,22 @@ ________________________________________________________________
             if (doesItExistResult == 1)
             {
                 SqlCommand command = _patientRecordsConnection.CreateCommand();
-                command.CommandText = "UPDATE PatientRecords SET @inBarcode VALUES WHERE Barcode = @outBarcode";
-                command.Parameters.AddWithValue("@Barcode", null);
+                command.CommandText = "UPDATE PatientRecords SET [User_ID] = @NullValue WHERE [User_ID] = @Barcode";
+                command.Parameters.AddWithValue("@NullValue", null);
+                command.Parameters.AddWithValue("@Barcode", barcodeTextBox.Text);
                 command.ExecuteNonQuery();
             }
             //else error message
 
-            _patientRecordsConnection.Open();
+            
+            _patientRecordsConnection.Close();
+        }
+
+        private void submitButton_Click(object sender, EventArgs e)
+        {
+            checkOutStudent();
+            this.Close();
+           
         }
     }
 }
