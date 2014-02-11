@@ -55,5 +55,46 @@ ________________________________________________________________
             //
 
         }
+
+        /*
+________________________________________________________________
+checkOutStudent
+Date Last Modified: 2/10/2014
+Name: Zach White
+
+Functionality:
+
+Parameters: 
+
+Returns: 
+
+Important notes: 
+________________________________________________________________
+*/
+
+        private void checkOutStudent()
+        {
+            //Make a command to check if the record exists before checking the student out
+            //This scenario could occur should the user try to check out the child if he/she is not checked in first
+            SqlCommand doesItExist = new SqlCommand("SQLTEXTHERE", _patientRecordsConnection);
+
+            doesItExist.Parameters.AddWithValue("@barcode", barcodeIn);
+
+            _patientRecordsConnection.Open();
+            //execute the doesItExist command, should return a 1 or 0 if it finds one or not
+            int doesItExistResult = Convert.ToInt32(doesItExist.ExecuteScalar());
+
+
+            if (doesItExistResult == 1)
+            {
+                SqlCommand command = _patientRecordsConnection.CreateCommand();
+                command.CommandText = "UPDATE PatientRecords SET @inBarcode VALUES WHERE Barcode = @outBarcode";
+                command.Parameters.AddWithValue("@Barcode", null);
+                command.ExecuteNonQuery();
+            }
+            //else error message
+
+            _patientRecordsConnection.Open();
+        }
     }
 }
