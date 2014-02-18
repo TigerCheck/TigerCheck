@@ -31,7 +31,7 @@ namespace TigerCheck
     public partial class checkInScreen : Form
     {
         //new SQL Connection object
-        SqlConnection _patientRecordsConnection = new SqlConnection("Data Source=tcp:172.17.72.109;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
+        SqlConnection _patientRecordsConnection = new SqlConnection("Data Source=tcp:172.17.72.238;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
 
         public checkInScreen()
         {
@@ -201,24 +201,24 @@ ________________________________________________________________
         private bool addPatientToDatabase(string firstNameIn, string lastNameIn, int ageIn, string sexIn, string raceIn, int barcodeIn)
         {
 
-            SqlConnection connection = new SqlConnection("Data Source=tcp:172.17.72.109;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
+            SqlConnection connection = new SqlConnection("Data Source=tcp:172.17.72.79;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
 
             //Make a command to check if the record exists befor inserting, otherwise may overwrite
             //This scenario could occur should the user try to check in the same child twice.
-            SqlCommand doesItExist = new SqlCommand("SQLTEXTHERE", _patientRecordsConnection);
+            SqlCommand doesItExist = new SqlCommand("IF EXISTS(SELECT 1 FROM TigerCheckProduction.dbo.PatientRecords WHERE [ID_Num] = @Barcode) SELECT 1 ELSE SELECT 0", _patientRecordsConnection);
 
             //add the parameters to the doesItExist command
  
-            doesItExist.Parameters.AddWithValue("@barcode", barcodeIn);
+            doesItExist.Parameters.AddWithValue("@Barcode", barcodeIn);
 
             _patientRecordsConnection.Open();
             //execute the doesItExist command, should return a 1 or 0 if it finds one or not
             int doesItExistResult = Convert.ToInt32(doesItExist.ExecuteScalar());
 
-            if (doesItExistResult == 1)
+            if (doesItExistResult == 0)
             {
                 SqlCommand command = _patientRecordsConnection.CreateCommand();
-                command.CommandText = "INSERT INTO PatientRecords (First_Name, Last_Name, Age, Sex, Race, Barcode) VALUES (@First_Name, @Last_Name, @Age, @Sex, @Race, @Barcode)";
+                command.CommandText = "INSERT INTO PatientRecords (First_Name, Last_Name, Age, Sex, Race,ID_Num) VALUES (@First_Name, @Last_Name, @Age, @Sex, @Race, @Barcode)";
                 command.Parameters.AddWithValue("@First_Name", firstNameIn);
                 command.Parameters.AddWithValue("@Last_Name", firstNameIn);
                 command.Parameters.AddWithValue("@Age", ageIn);

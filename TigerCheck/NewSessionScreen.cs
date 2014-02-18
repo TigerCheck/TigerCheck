@@ -53,7 +53,7 @@ ________________________________________________________________
             //submit the session data to the database
             
             //First, make an object with an address that will be able to connect to the database
-            SqlConnection session_Data_Connection = new SqlConnection("Data Source=tcp:172.17.72.109;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
+            SqlConnection session_Data_Connection = new SqlConnection("Data Source=tcp:172.17.72.79;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
 
             //Open the connection
             session_Data_Connection.Open();

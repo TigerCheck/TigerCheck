@@ -75,10 +75,10 @@ ________________________________________________________________
 
         private void checkOutStudent()
         {
-            SqlConnection _patientRecordsConnection = new SqlConnection("Data Source=tcp:172.17.72.109;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
+            SqlConnection _patientRecordsConnection = new SqlConnection("Data Source=tcp:172.17.72.79;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
             //Make a command to check if the record exists before checking the student out
             //This scenario could occur should the user try to check out the child if he/she is not checked in first
-            SqlCommand doesItExist = new SqlCommand("IF EXISTS(SELECT 1 FROM TigerCheckProduction.dbo.PatientRecords WHERE [User_ID] = @barcode) Select 1 ELSE Select 0", _patientRecordsConnection);
+            SqlCommand doesItExist = new SqlCommand("IF EXISTS(SELECT 1 FROM TigerCheckProduction.dbo.PatientRecords WHERE [ID_Num] = @barcode) Select 1 ELSE Select 0", _patientRecordsConnection);
 
             doesItExist.Parameters.AddWithValue("@barcode", barcodeTextBox.Text);
 
@@ -90,8 +90,8 @@ ________________________________________________________________
             if (doesItExistResult == 1)
             {
                 SqlCommand command = _patientRecordsConnection.CreateCommand();
-                command.CommandText = "UPDATE PatientRecords SET [User_ID] = @NullValue WHERE [User_ID] = @Barcode";
-                command.Parameters.AddWithValue("@NullValue", null);
+                command.CommandText = "UPDATE PatientRecords SET [ID_Num] = @NullValue WHERE [ID_Num] = @Barcode";
+                command.Parameters.AddWithValue("@NullValue", 0);
                 command.Parameters.AddWithValue("@Barcode", barcodeTextBox.Text);
                 command.ExecuteNonQuery();
             }
