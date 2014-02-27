@@ -79,6 +79,7 @@
     <Compile Include="CheckOutScreen.Designer.cs">
       <DependentUpon>CheckOutScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient.cs" />
     <Compile Include="TigerSQL.cs" />
     <Compile Include="Height and Weight.cs">
       <SubType>Form</SubType>
