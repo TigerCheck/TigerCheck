@@ -23,6 +23,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
 
 
 
@@ -57,6 +59,10 @@ ________________________________________________________________
         private void AdminScreen_Load(object sender, EventArgs e)
         {
 
+            //Let's set the current session label to whatever is active. This will tell someone what's up. Also, if for some reason the program is closed, then the users can just pick up
+            //where they left off
+
+            setActiveSessionLabel();
 
 
 
@@ -146,9 +152,49 @@ ________________________________________________________________
 
         }
 
-      
-        
 
+/*
+________________________________________________________________
+setActiveSessionLabel
+Date Last Modified: 25/25/2014
+Name: Ethan Darby
+         
+Functionality: The active session screen is set here, to either -None- or the name of whatever session is active
+
+Parameters: None
+
+Returns: None
+
+Important notes: THIS IS NOT TESTED AND PROBABLY NOT FINISHED
+________________________________________________________________
+        */
+       
+        public void setActiveSessionLabel(){
+            //first lets check to see if there is an active session
+            //Make a connection
+            SqlConnection connectionToTigerCheckProduction = new SqlConnection(Properties.Settings.Default.TigerCheckProductionConnectionString);
+            connectionToTigerCheckProduction.Open();
+            //make command ------- EDIT THIS, IT'S NOT CHECKING FOR ACTIVE FLAG, IT'S A COPIED QUERY -------
+            SqlCommand checkIfActiveSessionExists = new SqlCommand("IF Exists(Select 1 From TigerCheckProduction.dbo.sessionData WHERE [Active_Flag] = 1) Select 1 Else Select 0", connectionToTigerCheckProduction);
+            //execture command
+            if (Convert.ToInt32(checkIfActiveSessionExists.ExecuteScalar()) == 1)
+            {
+                //get the value of the currently active session
+                SqlCommand getActiveSession = new SqlCommand("Select [School_Name] from TigerCheckProduction.dbo.sessionData Where [Active_Flag] = 1", connectionToTigerCheckProduction);
+                //make a SqlDataReader to get the actual field value from the table that is already active
+                //Note, we are getting the school name here to put in the label
+                SqlDataReader getSession = getActiveSession.ExecuteReader();
+                getSession.Read();
+
+                //now set the label to the school name
+                currentSessionLabel.Text = Convert.ToString(getSession["School_Name"]);
+            }
+            else
+            {
+                currentSessionLabel.Text = "-None-";
+            }
+
+        }
       
     }
 }
