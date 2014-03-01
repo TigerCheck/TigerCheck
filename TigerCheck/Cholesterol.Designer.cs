@@ -37,7 +37,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(149, 173);
+            this.button1.Location = new System.Drawing.Point(160, 170);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 9;
@@ -46,7 +46,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(59, 173);
+            this.button2.Location = new System.Drawing.Point(65, 170);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 8;
@@ -56,7 +56,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(205, 70);
+            this.label2.Location = new System.Drawing.Point(181, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 7;
@@ -65,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 70);
+            this.label1.Location = new System.Drawing.Point(54, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 6;
@@ -73,9 +73,9 @@
             // 
             // cholesterolTextBox
             // 
-            this.cholesterolTextBox.Location = new System.Drawing.Point(99, 63);
+            this.cholesterolTextBox.Location = new System.Drawing.Point(125, 60);
             this.cholesterolTextBox.Name = "cholesterolTextBox";
-            this.cholesterolTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cholesterolTextBox.Size = new System.Drawing.Size(50, 20);
             this.cholesterolTextBox.TabIndex = 5;
             // 
             // Cholesterol
