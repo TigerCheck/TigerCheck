@@ -73,6 +73,12 @@
     <Compile Include="BloodPressure.Designer.cs">
       <DependentUpon>BloodPressure.cs</DependentUpon>
     </Compile>
+    <Compile Include="BloodSugar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodSugar.Designer.cs">
+      <DependentUpon>BloodSugar.cs</DependentUpon>
+    </Compile>
     <Compile Include="CheckInScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     </Compile>
     <Compile Include="CheckOutScreen.Designer.cs">
       <DependentUpon>CheckOutScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cholesterol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cholesterol.Designer.cs">
+      <DependentUpon>Cholesterol.cs</DependentUpon>
     </Compile>
     <Compile Include="HeartRate.cs">
       <SubType>Form</SubType>
@@ -112,11 +124,17 @@
     <EmbeddedResource Include="AdminScreen.resx">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BloodSugar.resx">
+      <DependentUpon>BloodSugar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CheckInScreen.resx">
       <DependentUpon>CheckInScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CheckOutScreen.resx">
       <DependentUpon>CheckOutScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cholesterol.resx">
+      <DependentUpon>Cholesterol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewSessionScreen.resx">
       <DependentUpon>NewSessionScreen.cs</DependentUpon>
