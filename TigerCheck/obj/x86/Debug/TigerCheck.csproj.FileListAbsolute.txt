@@ -1,14 +1,10 @@
 C:\Users\Zach\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck.exe.config
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck.exe.config
-C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.AdminScreen.resources
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.checkInScreen.resources
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.checkOutScreen.resources
-C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.Form1.resources
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.newSessionScreen.resources
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.Properties.Resources.resources
-C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\GenerateResource.read.1.tlog
-C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck.exe
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck.pdb
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.exe
@@ -19,3 +15,9 @@ C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck.e
 C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.exe
 C:\Users\Ross\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck.exe.config
 C:\Users\Ross\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.exe
+C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.csprojResolveAssemblyReference.cache
+C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.BloodPressure.resources
+C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.BloodSugar.resources
+C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.Cholesterol.resources
+C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.HeartRate.resources
+C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.csproj.GenerateResource.Cache

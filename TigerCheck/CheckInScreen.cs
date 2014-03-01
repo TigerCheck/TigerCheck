@@ -31,7 +31,7 @@ namespace TigerCheck
     public partial class checkInScreen : Form
     {
         //new SQL Connection object
-        SqlConnection _patientRecordsConnection = new SqlConnection("Data Source=tcp:172.17.72.238;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
+        SqlConnection _patientRecordsConnection = new SqlConnection(Properties.Settings.Default.TigerCheckProductionConnectionString);
 
         public checkInScreen()
         {

@@ -64,5 +64,17 @@ namespace TigerCheck
         {
             this.Close();
         }
+
+        private void BloodPressure_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+        }
+
+        
     }
 }

@@ -175,19 +175,19 @@ ________________________________________________________________
             SqlConnection connectionToTigerCheckProduction = new SqlConnection(Properties.Settings.Default.TigerCheckProductionConnectionString);
             connectionToTigerCheckProduction.Open();
             //make command ------- EDIT THIS, IT'S NOT CHECKING FOR ACTIVE FLAG, IT'S A COPIED QUERY -------
-            SqlCommand checkIfActiveSessionExists = new SqlCommand("IF Exists(Select 1 From TigerCheckProduction.dbo.sessionData WHERE [Active_Flag] = 1) Select 1 Else Select 0", connectionToTigerCheckProduction);
+            SqlCommand checkIfActiveSessionExists = new SqlCommand("IF Exists(Select 1 From TigerCheckProduction.dbo.sessionData WHERE [ActiveFlag] = 1) Select 1 Else Select 0", connectionToTigerCheckProduction);
             //execture command
             if (Convert.ToInt32(checkIfActiveSessionExists.ExecuteScalar()) == 1)
             {
                 //get the value of the currently active session
-                SqlCommand getActiveSession = new SqlCommand("Select [School_Name] from TigerCheckProduction.dbo.sessionData Where [Active_Flag] = 1", connectionToTigerCheckProduction);
+                SqlCommand getActiveSession = new SqlCommand("Select [County], [School_Name] from TigerCheckProduction.dbo.sessionData Where [ActiveFlag] = 1", connectionToTigerCheckProduction);
                 //make a SqlDataReader to get the actual field value from the table that is already active
                 //Note, we are getting the school name here to put in the label
                 SqlDataReader getSession = getActiveSession.ExecuteReader();
                 getSession.Read();
 
                 //now set the label to the school name
-                currentSessionLabel.Text = Convert.ToString(getSession["School_Name"]);
+                currentSessionLabel.Text =Convert.ToString(getSession["School_Name"]) + ", " + Convert.ToString(getSession["County"]);
             }
             else
             {
@@ -195,6 +195,19 @@ ________________________________________________________________
             }
 
         }
+
+        private void heightWeigtButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bloodPressureButton_Click(object sender, EventArgs e)
+        {
+            BloodPressure newScreen = new BloodPressure();
+            newScreen.Show();
+        }
+
+       
       
     }
 }

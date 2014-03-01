@@ -27,10 +27,11 @@ namespace TigerCheck
 {
     public partial class newSessionScreen : Form
     {
-
+        SqlConnection session_Data_Connection = new SqlConnection(Properties.Settings.Default.TigerCheckProductionConnectionString);
         public newSessionScreen()
         {
             InitializeComponent();
+
             
         }
 
@@ -58,7 +59,7 @@ ________________________________________________________________
             //submit the session data to the database
             
             //First, make an object with an address that will be able to connect to the database
-            SqlConnection session_Data_Connection = new SqlConnection("Data Source=tcp:172.17.72.79;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
+           
            
             //Open the connection
             session_Data_Connection.Open();
@@ -79,8 +80,13 @@ ________________________________________________________________
 
             this.Owner.Controls["checkInButton"].Enabled = true;
             this.Owner.Controls["checkOutButton"].Enabled = true;
+            this.Owner.Controls["currentSessionLabel"].Text = countyComboBox.Text + ", " + schoolComboBox.Text;
             session_Data_Connection.Close();
+            
             this.Close();
+            
+
+            
         }
 
 /*
@@ -142,7 +148,97 @@ ________________________________________________________________
 */
         private void addRecordToDatabase(SqlConnection connectionIn, string schoolIn, string countyIn, DateTime dateIn)
         {
-            List <string> checkedBoxesTitles = new List <string>();
+
+            int Height_And_Weight = 0;
+            int Cholesterol = 0;
+            int Vision = 0;
+            int Heart = 0;
+            int Dental = 0;
+            int Blood_Pressure = 0;
+            int Blood_Sugar = 0;
+            int Hearing = 0;
+            int Lungs = 0;
+            int Ears = 0;
+            int Throat = 0;
+            int Nose = 0;
+            int Scoliosis = 0;
+
+
+            if (heightAndWeightCheckBox.Checked)
+            {
+                Height_And_Weight = 1;
+            }
+            if (cholesterolCheckBox.Checked)
+	        {
+		 Cholesterol = 1;
+	        }
+            if (visionCheckBox.Checked)
+            {
+                Vision = 1;
+            }
+            if (dentalCheckBox.Checked)
+            {
+                Dental = 1;
+            }
+            if (bloodPressureCheckBox.Checked)
+            {
+                Blood_Pressure = 1;
+            }
+            if (bloodSugarCheckBox.Checked)
+            {
+                Blood_Sugar = 1;
+            }
+            if (hearingCheckBox.Checked)
+            {
+                Hearing = 1;
+            }
+            if (lungsCheckBox.Checked)
+            {
+                Lungs = 1;
+            }
+            if (earsCheckBox.Checked)
+            {
+                Ears = 1;
+            }
+
+            if (throatCheckBox.Checked)
+            {
+                Throat = 1;
+            }
+            if (noseCheckBox.Checked)
+            {
+                Nose = 1;
+            }
+            if (scoliosisCheckBox.Checked)
+            {
+                Scoliosis = 1;
+            }
+
+
+            SqlCommand insertSession = new SqlCommand("INSERT INTO TigerCheckProduction.dbo.sessionData (Session_ID,School_Name,County,Date,Height_And_Weight,Cholesterol, Vision, Heart, Dental, Blood_Pressure, Blood_Sugar, Hearing, Lungs, Ears, Throat, Nose, Scoliosis, ActiveFlag) VALUES (@Session_ID, @School_Name, @County,@Date,@Height_And_Weight, @Cholesterol, @Vision, @Heart, @Dental, @Blood_Pressure, @Blood_Sugar, @Hearing, @Lungs, @Ears, @Throat, @Nose, @Scoliosis, @ActiveFlag)", session_Data_Connection);
+            insertSession.Parameters.AddWithValue("@Session_ID", countyIn.Substring(0, 3) + schoolIn.Substring(0, 3));
+            insertSession.Parameters.AddWithValue("@School_Name", schoolIn);
+            insertSession.Parameters.AddWithValue("@County", countyIn);
+            insertSession.Parameters.AddWithValue("@Date", dateIn);
+            insertSession.Parameters.AddWithValue("@Height_And_Weight", Height_And_Weight);
+            insertSession.Parameters.AddWithValue("@Cholesterol", Cholesterol);
+            insertSession.Parameters.AddWithValue("@Dental", Dental);
+            insertSession.Parameters.AddWithValue("@Heart", Heart);
+            insertSession.Parameters.AddWithValue("@Vision", Vision);
+            insertSession.Parameters.AddWithValue("@Blood_Pressure", Blood_Pressure);
+            insertSession.Parameters.AddWithValue("@Blood_Sugar", Blood_Sugar);
+            insertSession.Parameters.AddWithValue("@Hearing", Hearing);
+            insertSession.Parameters.AddWithValue("@Lungs", Lungs);
+            insertSession.Parameters.AddWithValue("@Ears", Ears);
+            insertSession.Parameters.AddWithValue("@Throat", Throat);
+            insertSession.Parameters.AddWithValue("@Nose", Nose);
+            insertSession.Parameters.AddWithValue("@Scoliosis", Scoliosis);
+            insertSession.Parameters.AddWithValue("@ActiveFlag", 1);
+
+
+            insertSession.ExecuteNonQuery();
+
+            /*List <string> checkedBoxesTitles = new List <string>();
 
             foreach (CheckBox aCheckBox in this.stationsGroupBox.Controls)
             {
@@ -152,7 +248,7 @@ ________________________________________________________________
                 }
             }
 
-            //add to the database
+            */
 
         }
 

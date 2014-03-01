@@ -75,7 +75,7 @@ ________________________________________________________________
 
         private void checkOutStudent()
         {
-            SqlConnection _patientRecordsConnection = new SqlConnection("Data Source=tcp:172.17.72.79;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010");
+            SqlConnection _patientRecordsConnection = new SqlConnection(Properties.Settings.Default.TigerCheckProductionConnectionString);
             //Make a command to check if the record exists before checking the student out
             //This scenario could occur should the user try to check out the child if he/she is not checked in first
             SqlCommand doesItExist = new SqlCommand("IF EXISTS(SELECT 1 FROM TigerCheckProduction.dbo.PatientRecords WHERE [ID_Num] = @barcode) Select 1 ELSE Select 0", _patientRecordsConnection);
