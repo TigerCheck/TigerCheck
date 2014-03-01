@@ -124,6 +124,9 @@
     <EmbeddedResource Include="AdminScreen.resx">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BloodPressure.resx">
+      <DependentUpon>BloodPressure.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BloodSugar.resx">
       <DependentUpon>BloodSugar.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cholesterol.resx">
       <DependentUpon>Cholesterol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeartRate.resx">
+      <DependentUpon>HeartRate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewSessionScreen.resx">
       <DependentUpon>NewSessionScreen.cs</DependentUpon>

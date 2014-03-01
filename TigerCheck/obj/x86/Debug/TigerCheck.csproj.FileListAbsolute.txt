@@ -17,3 +17,5 @@ C:\Users\Zach\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.ex
 C:\Users\Zach\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.pdb
 C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck.exe.config
 C:\Users\48a7ij2fj\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.exe
+C:\Users\Ross\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck.exe.config
+C:\Users\Ross\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.exe
