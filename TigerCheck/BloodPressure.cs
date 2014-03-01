@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project1
+namespace TigerCheck
 {
     public partial class BloodPressure : Form
     {
@@ -17,20 +17,20 @@ namespace Project1
             InitializeComponent();
             //SQL get patient
         }
-/*
-________________________________________________________________
-submitButton_Click
-Date Ross Spears
+        /*
+        ________________________________________________________________
+        submitButton_Click
+        Date Ross Spears
 
-Functionality: This function is called when the submit button is pressed.
+        Functionality: This function is called when the submit button is pressed.
 
-Parameters: No info being passed
+        Parameters: No info being passed
 
-Returns: Nothing returned is returned, but it does hit the sql database and stores the values of systolic and diatolic blood pressure
+        Returns: Nothing returned is returned, but it does hit the sql database and stores the values of systolic and diatolic blood pressure
 
-Important notes:
-________________________________________________________________
-*/
+        Important notes:
+        ________________________________________________________________
+        */
         private void submitButton_Click(object sender, EventArgs e)
         {
             try //Check to ensure entered value is a number
@@ -45,21 +45,21 @@ ________________________________________________________________
             //SQL write Systolic/Diatolic
             this.Close();
         }
-/*
-________________________________________________________________
-cancelButton_Click
-Date Last Modified: 2/28/2014
-Name: Ross Spears
+        /*
+        ________________________________________________________________
+        cancelButton_Click
+        Date Last Modified: 2/28/2014
+        Name: Ross Spears
 
-Functionality: This function is called when the cancel button is pressed.
+        Functionality: This function is called when the cancel button is pressed.
 
-Parameters: No info being passed
+        Parameters: No info being passed
 
-Returns: Nothing returned is returned, and returns to the previous screen
+        Returns: Nothing returned is returned, and returns to the previous screen
 
-Important notes:
-________________________________________________________________
-*/
+        Important notes:
+        ________________________________________________________________
+        */
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();

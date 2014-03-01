@@ -13,3 +13,5 @@ C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck.pdb
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.exe
 C:\Users\Ethan Darby\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.pdb
+C:\Users\Zach\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.exe
+C:\Users\Zach\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.pdb

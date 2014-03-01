@@ -67,6 +67,12 @@
     <Compile Include="AdminScreen.Designer.cs">
       <DependentUpon>AdminScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="BloodPressure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodPressure.Designer.cs">
+      <DependentUpon>BloodPressure.cs</DependentUpon>
+    </Compile>
     <Compile Include="CheckInScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,13 +85,13 @@
     <Compile Include="CheckOutScreen.Designer.cs">
       <DependentUpon>CheckOutScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Patient.cs" />
-    <Compile Include="Height and Weight.cs">
+    <Compile Include="HeartRate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Height and Weight.Designer.cs">
-      <DependentUpon>Height and Weight.cs</DependentUpon>
+    <Compile Include="HeartRate.Designer.cs">
+      <DependentUpon>HeartRate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient.cs" />
     <Compile Include="NewSessionScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,9 +117,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CheckOutScreen.resx">
       <DependentUpon>CheckOutScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Height and Weight.resx">
-      <DependentUpon>Height and Weight.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewSessionScreen.resx">
       <DependentUpon>NewSessionScreen.cs</DependentUpon>
