@@ -33,6 +33,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bloodSugarTextBox = new System.Windows.Forms.TextBox();
+            this.barcodePanel = new System.Windows.Forms.Panel();
+            this.submitButtonBS = new System.Windows.Forms.Button();
+            this.barcodeTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.closeButtonBS = new System.Windows.Forms.Button();
+            this.barcodePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -78,19 +84,71 @@
             this.bloodSugarTextBox.Size = new System.Drawing.Size(50, 20);
             this.bloodSugarTextBox.TabIndex = 10;
             // 
+            // barcodePanel
+            // 
+            this.barcodePanel.Controls.Add(this.closeButtonBS);
+            this.barcodePanel.Controls.Add(this.submitButtonBS);
+            this.barcodePanel.Controls.Add(this.barcodeTextBox);
+            this.barcodePanel.Controls.Add(this.label3);
+            this.barcodePanel.Location = new System.Drawing.Point(12, 35);
+            this.barcodePanel.Name = "barcodePanel";
+            this.barcodePanel.Size = new System.Drawing.Size(260, 192);
+            this.barcodePanel.TabIndex = 15;
+            // 
+            // submitButtonBS
+            // 
+            this.submitButtonBS.Location = new System.Drawing.Point(88, 115);
+            this.submitButtonBS.Name = "submitButtonBS";
+            this.submitButtonBS.Size = new System.Drawing.Size(75, 23);
+            this.submitButtonBS.TabIndex = 2;
+            this.submitButtonBS.Text = "Submit";
+            this.submitButtonBS.UseVisualStyleBackColor = true;
+            this.submitButtonBS.Click += new System.EventHandler(this.submitButtonBS_Click);
+            // 
+            // barcodeTextBox
+            // 
+            this.barcodeTextBox.Location = new System.Drawing.Point(52, 76);
+            this.barcodeTextBox.Name = "barcodeTextBox";
+            this.barcodeTextBox.Size = new System.Drawing.Size(155, 20);
+            this.barcodeTextBox.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(48, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(174, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Enter Or Scan Barcode";
+            // 
+            // closeButtonBS
+            // 
+            this.closeButtonBS.Location = new System.Drawing.Point(88, 145);
+            this.closeButtonBS.Name = "closeButtonBS";
+            this.closeButtonBS.Size = new System.Drawing.Size(75, 23);
+            this.closeButtonBS.TabIndex = 3;
+            this.closeButtonBS.Text = "Close";
+            this.closeButtonBS.UseVisualStyleBackColor = true;
+            this.closeButtonBS.Click += new System.EventHandler(this.closeButtonBS_Click);
+            // 
             // BloodSugar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.barcodePanel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bloodSugarTextBox);
             this.Name = "BloodSugar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BloodSugar";
+            this.barcodePanel.ResumeLayout(false);
+            this.barcodePanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,5 +161,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox bloodSugarTextBox;
+        private System.Windows.Forms.Panel barcodePanel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button submitButtonBS;
+        private System.Windows.Forms.TextBox barcodeTextBox;
+        private System.Windows.Forms.Button closeButtonBS;
     }
 }
