@@ -35,10 +35,10 @@
             this.submitButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.barcodePanel = new System.Windows.Forms.Panel();
+            this.closeButtonHR = new System.Windows.Forms.Button();
             this.submitButtonHR = new System.Windows.Forms.Button();
             this.barcodeTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.closeButtonHR = new System.Windows.Forms.Button();
             this.barcodePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,6 +106,16 @@
             this.barcodePanel.Size = new System.Drawing.Size(372, 159);
             this.barcodePanel.TabIndex = 6;
             // 
+            // closeButtonHR
+            // 
+            this.closeButtonHR.Location = new System.Drawing.Point(152, 124);
+            this.closeButtonHR.Name = "closeButtonHR";
+            this.closeButtonHR.Size = new System.Drawing.Size(75, 23);
+            this.closeButtonHR.TabIndex = 3;
+            this.closeButtonHR.Text = "Close";
+            this.closeButtonHR.UseVisualStyleBackColor = true;
+            this.closeButtonHR.Click += new System.EventHandler(this.closeButtonHR_Click);
+            // 
             // submitButtonHR
             // 
             this.submitButtonHR.Location = new System.Drawing.Point(152, 95);
@@ -133,16 +143,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Enter Or Scan Barcode";
             // 
-            // closeButtonHR
-            // 
-            this.closeButtonHR.Location = new System.Drawing.Point(152, 124);
-            this.closeButtonHR.Name = "closeButtonHR";
-            this.closeButtonHR.Size = new System.Drawing.Size(75, 23);
-            this.closeButtonHR.TabIndex = 3;
-            this.closeButtonHR.Text = "Close";
-            this.closeButtonHR.UseVisualStyleBackColor = true;
-            this.closeButtonHR.Click += new System.EventHandler(this.closeButtonHR_Click);
-            // 
             // HeartRate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,10 +166,7 @@
 
         }
 
-        private void submitButton_Click_1(object sender, System.EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
+       
 
         #endregion
 

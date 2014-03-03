@@ -167,51 +167,64 @@ ________________________________________________________________
             if (heightAndWeightCheckBox.Checked)
             {
                 Height_And_Weight = 1;
+                this.Owner.Controls["heightWeightButton"].Visible = true;
+                
             }
             if (cholesterolCheckBox.Checked)
 	        {
-		 Cholesterol = 1;
+		     Cholesterol = 1;
+            this.Owner.Controls["cholesterolButton"].Visible = true;
 	        }
             if (visionCheckBox.Checked)
             {
                 Vision = 1;
+                this.Owner.Controls["visionButton"].Visible = true;
             }
             if (dentalCheckBox.Checked)
             {
                 Dental = 1;
+                this.Owner.Controls["dentalButton"].Visible = true;
             }
             if (bloodPressureCheckBox.Checked)
             {
                 Blood_Pressure = 1;
+                this.Owner.Controls["bloodPressureButton"].Visible = true;
             }
             if (bloodSugarCheckBox.Checked)
             {
                 Blood_Sugar = 1;
+                this.Owner.Controls["bloodSugarButton"].Visible = true;
             }
             if (hearingCheckBox.Checked)
             {
                 Hearing = 1;
+                this.Owner.Controls["hearingButton"].Visible = true;
             }
             if (lungsCheckBox.Checked)
             {
                 Lungs = 1;
+                this.Owner.Controls["lungsButton"].Visible = true;
             }
             if (earsCheckBox.Checked)
             {
                 Ears = 1;
+                this.Owner.Controls["earsButton"].Visible = true;
             }
 
             if (throatCheckBox.Checked)
             {
                 Throat = 1;
+                this.Owner.Controls["throatButton"].Visible = true;
             }
             if (noseCheckBox.Checked)
             {
                 Nose = 1;
+                this.Owner.Controls["noseButton"].Visible = true;
             }
             if (scoliosisCheckBox.Checked)
             {
                 Scoliosis = 1;
+                this.Owner.Controls["scoliosisButton"].Visible = true;
             }
 
 

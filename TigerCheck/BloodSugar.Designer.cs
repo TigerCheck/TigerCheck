@@ -34,10 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bloodSugarTextBox = new System.Windows.Forms.TextBox();
             this.barcodePanel = new System.Windows.Forms.Panel();
+            this.closeButtonBS = new System.Windows.Forms.Button();
             this.submitButtonBS = new System.Windows.Forms.Button();
             this.barcodeTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.closeButtonBS = new System.Windows.Forms.Button();
             this.barcodePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,7 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "Submit";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -90,10 +91,20 @@
             this.barcodePanel.Controls.Add(this.submitButtonBS);
             this.barcodePanel.Controls.Add(this.barcodeTextBox);
             this.barcodePanel.Controls.Add(this.label3);
-            this.barcodePanel.Location = new System.Drawing.Point(12, 35);
+            this.barcodePanel.Location = new System.Drawing.Point(12, 27);
             this.barcodePanel.Name = "barcodePanel";
-            this.barcodePanel.Size = new System.Drawing.Size(260, 192);
+            this.barcodePanel.Size = new System.Drawing.Size(260, 200);
             this.barcodePanel.TabIndex = 15;
+            // 
+            // closeButtonBS
+            // 
+            this.closeButtonBS.Location = new System.Drawing.Point(88, 145);
+            this.closeButtonBS.Name = "closeButtonBS";
+            this.closeButtonBS.Size = new System.Drawing.Size(75, 23);
+            this.closeButtonBS.TabIndex = 3;
+            this.closeButtonBS.Text = "Close";
+            this.closeButtonBS.UseVisualStyleBackColor = true;
+            this.closeButtonBS.Click += new System.EventHandler(this.closeButtonBS_Click);
             // 
             // submitButtonBS
             // 
@@ -121,16 +132,6 @@
             this.label3.Size = new System.Drawing.Size(174, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Enter Or Scan Barcode";
-            // 
-            // closeButtonBS
-            // 
-            this.closeButtonBS.Location = new System.Drawing.Point(88, 145);
-            this.closeButtonBS.Name = "closeButtonBS";
-            this.closeButtonBS.Size = new System.Drawing.Size(75, 23);
-            this.closeButtonBS.TabIndex = 3;
-            this.closeButtonBS.Text = "Close";
-            this.closeButtonBS.UseVisualStyleBackColor = true;
-            this.closeButtonBS.Click += new System.EventHandler(this.closeButtonBS_Click);
             // 
             // BloodSugar
             // 

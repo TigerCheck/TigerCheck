@@ -34,10 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cholesterolTextBox = new System.Windows.Forms.TextBox();
             this.barcodePanel = new System.Windows.Forms.Panel();
+            this.closeButtonChol = new System.Windows.Forms.Button();
             this.submitButtonInPanel = new System.Windows.Forms.Button();
             this.barcodeTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.closeButtonChol = new System.Windows.Forms.Button();
             this.barcodePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Submit";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -95,6 +96,16 @@
             this.barcodePanel.Size = new System.Drawing.Size(260, 238);
             this.barcodePanel.TabIndex = 10;
             // 
+            // closeButtonChol
+            // 
+            this.closeButtonChol.Location = new System.Drawing.Point(97, 143);
+            this.closeButtonChol.Name = "closeButtonChol";
+            this.closeButtonChol.Size = new System.Drawing.Size(75, 23);
+            this.closeButtonChol.TabIndex = 4;
+            this.closeButtonChol.Text = "Close";
+            this.closeButtonChol.UseVisualStyleBackColor = true;
+            this.closeButtonChol.Click += new System.EventHandler(this.closeButtonChol_Click);
+            // 
             // submitButtonInPanel
             // 
             this.submitButtonInPanel.Location = new System.Drawing.Point(97, 113);
@@ -121,16 +132,6 @@
             this.label3.Size = new System.Drawing.Size(174, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Enter Or Scan Barcode";
-            // 
-            // closeButtonChol
-            // 
-            this.closeButtonChol.Location = new System.Drawing.Point(97, 143);
-            this.closeButtonChol.Name = "closeButtonChol";
-            this.closeButtonChol.Size = new System.Drawing.Size(75, 23);
-            this.closeButtonChol.TabIndex = 4;
-            this.closeButtonChol.Text = "Close";
-            this.closeButtonChol.UseVisualStyleBackColor = true;
-            this.closeButtonChol.Click += new System.EventHandler(this.closeButtonChol_Click);
             // 
             // Cholesterol
             // 

@@ -62,7 +62,7 @@ ________________________________________________________________
             //Let's set the current session label to whatever is active. This will tell someone what's up. Also, if for some reason the program is closed, then the users can just pick up
             //where they left off
 
-            //setActiveSessionLabel();
+            setActiveSessionLabel();
 
 
 
@@ -196,21 +196,17 @@ ________________________________________________________________
 
         }
 
-        private void heightWeigtButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bloodPressureButton_Click(object sender, EventArgs e)
-        {
-            BloodPressure newBloodPressureScreen = new BloodPressure();
-            newBloodPressureScreen.Show();
-        }
-
         private void bloodSugarButton_Click(object sender, EventArgs e)
         {
             BloodSugar newBloodSugarScreen = new BloodSugar();
             newBloodSugarScreen.Show();
+        
+        }
+
+        private void heartRateButton_Click(object sender, EventArgs e)
+        {
+            HeartRate newHeartRateScreen = new HeartRate();
+            newHeartRateScreen.Show();
         }
 
         private void cholesterolButton_Click(object sender, EventArgs e)
@@ -219,11 +215,20 @@ ________________________________________________________________
             newCholesterolScreen.Show();
         }
 
-        private void heartRateButton_Click(object sender, EventArgs e)
+        private void bloodPressureButton_Click(object sender, EventArgs e)
         {
-            HeartRate newHeartRateScreen = new HeartRate();
-            newHeartRateScreen.Show();
+            BloodPressure newBloodPressureScreen = new BloodPressure();
+            newBloodPressureScreen.Show();
         }
+
+        private void heightWeightButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        
 
        
       

@@ -35,17 +35,20 @@
             this.currentSessionLabel = new System.Windows.Forms.Label();
             this.patientsInNoChange = new System.Windows.Forms.Label();
             this.patientsInLabel = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.earsButton = new System.Windows.Forms.Button();
+            this.visionButton = new System.Windows.Forms.Button();
+            this.dentalButton = new System.Windows.Forms.Button();
+            this.lungsButton = new System.Windows.Forms.Button();
             this.heartRateButton = new System.Windows.Forms.Button();
             this.cholesterolButton = new System.Windows.Forms.Button();
             this.bloodSugarButton = new System.Windows.Forms.Button();
             this.bloodPressureButton = new System.Windows.Forms.Button();
-            this.heightWeigtButton = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.heightWeightButton = new System.Windows.Forms.Button();
+            this.throatButton = new System.Windows.Forms.Button();
+            this.noseButton = new System.Windows.Forms.Button();
+            this.heartButton = new System.Windows.Forms.Button();
+            this.scoliosisButton = new System.Windows.Forms.Button();
+            this.hearingButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // newSessionButton
@@ -127,110 +130,164 @@
             this.patientsInLabel.TabIndex = 7;
             this.patientsInLabel.Text = "0";
             // 
-            // groupBox1
+            // earsButton
             // 
-            this.groupBox1.Controls.Add(this.button9);
-            this.groupBox1.Controls.Add(this.button8);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.heartRateButton);
-            this.groupBox1.Controls.Add(this.cholesterolButton);
-            this.groupBox1.Controls.Add(this.bloodSugarButton);
-            this.groupBox1.Controls.Add(this.bloodPressureButton);
-            this.groupBox1.Controls.Add(this.heightWeigtButton);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 427);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(928, 151);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.earsButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.earsButton.Location = new System.Drawing.Point(548, 435);
+            this.earsButton.Name = "earsButton";
+            this.earsButton.Size = new System.Drawing.Size(141, 23);
+            this.earsButton.TabIndex = 17;
+            this.earsButton.Text = "Ears";
+            this.earsButton.UseVisualStyleBackColor = true;
+            this.earsButton.Visible = false;
             // 
-            // button9
+            // visionButton
             // 
-            this.button9.Location = new System.Drawing.Point(357, 88);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(92, 23);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.visionButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.visionButton.Location = new System.Drawing.Point(548, 406);
+            this.visionButton.Name = "visionButton";
+            this.visionButton.Size = new System.Drawing.Size(141, 23);
+            this.visionButton.TabIndex = 16;
+            this.visionButton.Text = "Vision";
+            this.visionButton.UseVisualStyleBackColor = true;
+            this.visionButton.Visible = false;
             // 
-            // button8
+            // dentalButton
             // 
-            this.button8.Location = new System.Drawing.Point(357, 59);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(92, 23);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.dentalButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.dentalButton.Location = new System.Drawing.Point(548, 377);
+            this.dentalButton.Name = "dentalButton";
+            this.dentalButton.Size = new System.Drawing.Size(141, 23);
+            this.dentalButton.TabIndex = 15;
+            this.dentalButton.Text = "Dental";
+            this.dentalButton.UseVisualStyleBackColor = true;
+            this.dentalButton.Visible = false;
             // 
-            // button7
+            // lungsButton
             // 
-            this.button7.Location = new System.Drawing.Point(357, 30);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(92, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(196, 88);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(92, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.lungsButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lungsButton.Location = new System.Drawing.Point(379, 435);
+            this.lungsButton.Name = "lungsButton";
+            this.lungsButton.Size = new System.Drawing.Size(141, 23);
+            this.lungsButton.TabIndex = 14;
+            this.lungsButton.Text = "Lungs";
+            this.lungsButton.UseVisualStyleBackColor = true;
+            this.lungsButton.Visible = false;
             // 
             // heartRateButton
             // 
-            this.heartRateButton.Location = new System.Drawing.Point(196, 59);
+            this.heartRateButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.heartRateButton.Location = new System.Drawing.Point(379, 406);
             this.heartRateButton.Name = "heartRateButton";
-            this.heartRateButton.Size = new System.Drawing.Size(92, 23);
-            this.heartRateButton.TabIndex = 4;
-            this.heartRateButton.Text = "HeartRate";
+            this.heartRateButton.Size = new System.Drawing.Size(141, 23);
+            this.heartRateButton.TabIndex = 13;
+            this.heartRateButton.Text = "Heart Rate";
             this.heartRateButton.UseVisualStyleBackColor = true;
+            this.heartRateButton.Visible = false;
             this.heartRateButton.Click += new System.EventHandler(this.heartRateButton_Click);
             // 
             // cholesterolButton
             // 
-            this.cholesterolButton.Location = new System.Drawing.Point(196, 30);
+            this.cholesterolButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cholesterolButton.Location = new System.Drawing.Point(379, 377);
             this.cholesterolButton.Name = "cholesterolButton";
-            this.cholesterolButton.Size = new System.Drawing.Size(92, 23);
-            this.cholesterolButton.TabIndex = 3;
+            this.cholesterolButton.Size = new System.Drawing.Size(141, 23);
+            this.cholesterolButton.TabIndex = 12;
             this.cholesterolButton.Text = "Cholesterol";
             this.cholesterolButton.UseVisualStyleBackColor = true;
+            this.cholesterolButton.Visible = false;
             this.cholesterolButton.Click += new System.EventHandler(this.cholesterolButton_Click);
             // 
             // bloodSugarButton
             // 
-            this.bloodSugarButton.Location = new System.Drawing.Point(20, 88);
+            this.bloodSugarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bloodSugarButton.Location = new System.Drawing.Point(211, 435);
             this.bloodSugarButton.Name = "bloodSugarButton";
-            this.bloodSugarButton.Size = new System.Drawing.Size(92, 23);
-            this.bloodSugarButton.TabIndex = 2;
+            this.bloodSugarButton.Size = new System.Drawing.Size(141, 23);
+            this.bloodSugarButton.TabIndex = 11;
             this.bloodSugarButton.Text = "Blood Sugar";
             this.bloodSugarButton.UseVisualStyleBackColor = true;
+            this.bloodSugarButton.Visible = false;
             this.bloodSugarButton.Click += new System.EventHandler(this.bloodSugarButton_Click);
             // 
             // bloodPressureButton
             // 
-            this.bloodPressureButton.Location = new System.Drawing.Point(20, 59);
+            this.bloodPressureButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bloodPressureButton.Location = new System.Drawing.Point(211, 406);
             this.bloodPressureButton.Name = "bloodPressureButton";
-            this.bloodPressureButton.Size = new System.Drawing.Size(92, 23);
-            this.bloodPressureButton.TabIndex = 1;
+            this.bloodPressureButton.Size = new System.Drawing.Size(141, 23);
+            this.bloodPressureButton.TabIndex = 10;
             this.bloodPressureButton.Text = "Blood Pressure";
             this.bloodPressureButton.UseVisualStyleBackColor = true;
+            this.bloodPressureButton.Visible = false;
             this.bloodPressureButton.Click += new System.EventHandler(this.bloodPressureButton_Click);
             // 
-            // heightWeigtButton
+            // heightWeightButton
             // 
-            this.heightWeigtButton.Location = new System.Drawing.Point(20, 30);
-            this.heightWeigtButton.Name = "heightWeigtButton";
-            this.heightWeigtButton.Size = new System.Drawing.Size(92, 23);
-            this.heightWeigtButton.TabIndex = 0;
-            this.heightWeigtButton.Text = "Height/Weight";
-            this.heightWeigtButton.UseVisualStyleBackColor = true;
-            this.heightWeigtButton.Click += new System.EventHandler(this.heightWeigtButton_Click);
+            this.heightWeightButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.heightWeightButton.Location = new System.Drawing.Point(211, 377);
+            this.heightWeightButton.Name = "heightWeightButton";
+            this.heightWeightButton.Size = new System.Drawing.Size(141, 23);
+            this.heightWeightButton.TabIndex = 9;
+            this.heightWeightButton.Text = "Height/Weight";
+            this.heightWeightButton.UseVisualStyleBackColor = true;
+            this.heightWeightButton.Visible = false;
+            this.heightWeightButton.Click += new System.EventHandler(this.heightWeightButton_Click);
+            // 
+            // throatButton
+            // 
+            this.throatButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.throatButton.Location = new System.Drawing.Point(211, 464);
+            this.throatButton.Name = "throatButton";
+            this.throatButton.Size = new System.Drawing.Size(141, 23);
+            this.throatButton.TabIndex = 18;
+            this.throatButton.Text = "Throat";
+            this.throatButton.UseVisualStyleBackColor = true;
+            this.throatButton.Visible = false;
+            // 
+            // noseButton
+            // 
+            this.noseButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.noseButton.Location = new System.Drawing.Point(379, 464);
+            this.noseButton.Name = "noseButton";
+            this.noseButton.Size = new System.Drawing.Size(141, 23);
+            this.noseButton.TabIndex = 19;
+            this.noseButton.Text = "Nose";
+            this.noseButton.UseVisualStyleBackColor = true;
+            this.noseButton.Visible = false;
+            // 
+            // heartButton
+            // 
+            this.heartButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.heartButton.Location = new System.Drawing.Point(548, 464);
+            this.heartButton.Name = "heartButton";
+            this.heartButton.Size = new System.Drawing.Size(141, 23);
+            this.heartButton.TabIndex = 20;
+            this.heartButton.Text = "Heart";
+            this.heartButton.UseVisualStyleBackColor = true;
+            this.heartButton.Visible = false;
+            // 
+            // scoliosisButton
+            // 
+            this.scoliosisButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.scoliosisButton.Location = new System.Drawing.Point(211, 493);
+            this.scoliosisButton.Name = "scoliosisButton";
+            this.scoliosisButton.Size = new System.Drawing.Size(141, 23);
+            this.scoliosisButton.TabIndex = 21;
+            this.scoliosisButton.Text = "Scoliosis";
+            this.scoliosisButton.UseVisualStyleBackColor = true;
+            this.scoliosisButton.Visible = false;
+            // 
+            // hearingButton
+            // 
+            this.hearingButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.hearingButton.Location = new System.Drawing.Point(379, 493);
+            this.hearingButton.Name = "hearingButton";
+            this.hearingButton.Size = new System.Drawing.Size(141, 23);
+            this.hearingButton.TabIndex = 22;
+            this.hearingButton.Text = "Hearing";
+            this.hearingButton.UseVisualStyleBackColor = true;
+            this.hearingButton.Visible = false;
             // 
             // AdminScreen
             // 
@@ -238,7 +295,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(928, 578);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.hearingButton);
+            this.Controls.Add(this.scoliosisButton);
+            this.Controls.Add(this.heartButton);
+            this.Controls.Add(this.noseButton);
+            this.Controls.Add(this.throatButton);
+            this.Controls.Add(this.earsButton);
+            this.Controls.Add(this.visionButton);
+            this.Controls.Add(this.dentalButton);
+            this.Controls.Add(this.lungsButton);
+            this.Controls.Add(this.heartRateButton);
+            this.Controls.Add(this.cholesterolButton);
+            this.Controls.Add(this.bloodSugarButton);
+            this.Controls.Add(this.bloodPressureButton);
+            this.Controls.Add(this.heightWeightButton);
             this.Controls.Add(this.patientsInLabel);
             this.Controls.Add(this.patientsInNoChange);
             this.Controls.Add(this.currentSessionLabel);
@@ -251,7 +321,6 @@
             this.Text = "Tiger Check";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdminScreen_Load);
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,16 +335,20 @@
         private System.Windows.Forms.Label currentSessionLabel;
         private System.Windows.Forms.Label patientsInNoChange;
         private System.Windows.Forms.Label patientsInLabel;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button earsButton;
+        private System.Windows.Forms.Button visionButton;
+        private System.Windows.Forms.Button dentalButton;
+        private System.Windows.Forms.Button lungsButton;
         private System.Windows.Forms.Button heartRateButton;
         private System.Windows.Forms.Button cholesterolButton;
         private System.Windows.Forms.Button bloodSugarButton;
         private System.Windows.Forms.Button bloodPressureButton;
-        private System.Windows.Forms.Button heightWeigtButton;
+        private System.Windows.Forms.Button heightWeightButton;
+        private System.Windows.Forms.Button throatButton;
+        private System.Windows.Forms.Button noseButton;
+        private System.Windows.Forms.Button heartButton;
+        private System.Windows.Forms.Button scoliosisButton;
+        private System.Windows.Forms.Button hearingButton;
     }
 }
 
