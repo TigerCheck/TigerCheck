@@ -196,6 +196,17 @@ ________________________________________________________________
 
         }
 
+
+
+
+        /*
+
+        The following is absent of any headers for each function. These are just the button click events
+         * for the stations. They are self explanatory and all do the same thing for each button.
+         * THERE IS NO MORE CODE OF ANY COMPLEXITY BELOW HERE, IT'S JUST BUTTON CLICK EVENTS
+         
+        */
+
         private void bloodSugarButton_Click(object sender, EventArgs e)
         {
             BloodSugar newBloodSugarScreen = new BloodSugar();

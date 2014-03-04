@@ -148,6 +148,7 @@
             this.Name = "BloodSugar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BloodSugar";
+            this.Load += new System.EventHandler(this.BloodSugar_Load);
             this.barcodePanel.ResumeLayout(false);
             this.barcodePanel.PerformLayout();
             this.ResumeLayout(false);

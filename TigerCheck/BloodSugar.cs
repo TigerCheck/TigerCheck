@@ -59,6 +59,7 @@ namespace TigerCheck
                 patient.getPatientData(Convert.ToInt32(barcodeTextBox.Text));
 
                 bloodSugarTextBox.Text = patient.Blood_Sugar.ToString();
+                bloodSugarTextBox.Focus();
             }
             else
             {
@@ -95,6 +96,12 @@ namespace TigerCheck
             patient.Blood_Sugar = bloodSugar;
             patient.updatePatientData("Blood_Sugar");
             this.Close();
+        }
+
+        private void BloodSugar_Load(object sender, EventArgs e)
+        {
+            //set focus to the text box
+            barcodeTextBox.Focus();
         }
     }
 }
