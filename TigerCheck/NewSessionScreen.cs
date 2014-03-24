@@ -173,7 +173,7 @@ ________________________________________________________________
             if (cholesterolCheckBox.Checked)
 	        {
 		     Cholesterol = 1;
-            this.Owner.Controls["cholesterolButton"].Visible = true;
+               this.Owner.Controls["cholesterolButton"].Visible = true;
 	        }
             if (visionCheckBox.Checked)
             {

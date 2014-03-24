@@ -63,13 +63,13 @@ checkOutStudent
 Date Last Modified: 2/10/2014
 Name: Zach White
 
-Functionality:
+Functionality: Remove a student from the list
 
-Parameters: 
+Parameters: n/a
 
-Returns: 
+Returns: n/a
 
-Important notes: 
+Important notes: This section of notes was completed by someone who didn't build this function (I based the info in the notes on what I read from the function)
 ________________________________________________________________
 */
 
