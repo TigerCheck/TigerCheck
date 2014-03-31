@@ -5,9 +5,9 @@
     <Setting Name="TigerCheckProductionConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=tcp:172.17.74.161;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=tcp:172.17.72.234;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=tcp:172.17.74.161;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010</Value>
+      <Value Profile="(Default)">Data Source=tcp:172.17.72.234;Initial Catalog=TigerCheckProduction;User ID=sa;Password=kidcheck2010</Value>
     </Setting>
   </Settings>
 </SettingsFile>

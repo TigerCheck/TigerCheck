@@ -188,11 +188,21 @@ ________________________________________________________________
 
                 //now set the label to the school name
                 currentSessionLabel.Text =Convert.ToString(getSession["School_Name"]) + ", " + Convert.ToString(getSession["County"]);
+                
+                //enable the labels
+                currentSessionLabel.Enabled = true;
+                currentSessionNoChange.Enabled = true;
+                checkInButton.Enabled = true;
+                checkOutButton.Enabled = true;
+                manageSessionsButton.Enabled = true;
+                
+            
             }
             else
             {
                 currentSessionLabel.Text = "-None-";
             }
+
 
         }
 

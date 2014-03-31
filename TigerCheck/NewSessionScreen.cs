@@ -163,6 +163,9 @@ ________________________________________________________________
             int Nose = 0;
             int Scoliosis = 0;
 
+            //set the flowlayout panel to visible
+            this.Owner.Controls["stationsPanel"].Visible = true;
+
 
             if (heightAndWeightCheckBox.Checked)
             {
@@ -251,18 +254,9 @@ ________________________________________________________________
 
             insertSession.ExecuteNonQuery();
 
-            /*List <string> checkedBoxesTitles = new List <string>();
-
-            foreach (CheckBox aCheckBox in this.stationsGroupBox.Controls)
-            {
-                if (aCheckBox.Checked)
-                {
-                    checkedBoxesTitles.Add(aCheckBox.Text);
-                }
-            }
-
-            */
-
+            //Now that we have started a new session, let's disable the new session button until this one has ended
+            this.Owner.Controls["newSessionButton"].Enabled = false;
+            this.Owner.Controls["stationsPanel"].Visible = true;
         }
 
 /*

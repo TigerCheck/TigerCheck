@@ -26,7 +26,7 @@ namespace TigerCheck.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=tcp:172.17.74.161;Initial Catalog=TigerCheckProduction;User ID=sa;Pas" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=tcp:172.17.72.234;Initial Catalog=TigerCheckProduction;User ID=sa;Pas" +
             "sword=kidcheck2010")]
         public string TigerCheckProductionConnectionString {
             get {

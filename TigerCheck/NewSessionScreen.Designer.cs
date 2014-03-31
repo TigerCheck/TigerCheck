@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newSessionScreen));
             this.countyLabel = new System.Windows.Forms.Label();
             this.schoolLabel = new System.Windows.Forms.Label();
             this.countyComboBox = new System.Windows.Forms.ComboBox();
@@ -54,7 +55,7 @@
             // 
             this.countyLabel.AutoSize = true;
             this.countyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countyLabel.Location = new System.Drawing.Point(53, 38);
+            this.countyLabel.Location = new System.Drawing.Point(201, 61);
             this.countyLabel.Name = "countyLabel";
             this.countyLabel.Size = new System.Drawing.Size(63, 20);
             this.countyLabel.TabIndex = 0;
@@ -64,7 +65,7 @@
             // 
             this.schoolLabel.AutoSize = true;
             this.schoolLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.schoolLabel.Location = new System.Drawing.Point(53, 80);
+            this.schoolLabel.Location = new System.Drawing.Point(201, 103);
             this.schoolLabel.Name = "schoolLabel";
             this.schoolLabel.Size = new System.Drawing.Size(62, 20);
             this.schoolLabel.TabIndex = 1;
@@ -142,16 +143,18 @@
             "Winston"});
             this.countyComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.countyComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.countyComboBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.countyComboBox.FormattingEnabled = true;
-            this.countyComboBox.Location = new System.Drawing.Point(123, 36);
+            this.countyComboBox.Location = new System.Drawing.Point(271, 59);
             this.countyComboBox.Name = "countyComboBox";
             this.countyComboBox.Size = new System.Drawing.Size(161, 21);
             this.countyComboBox.TabIndex = 2;
             // 
             // schoolComboBox
             // 
+            this.schoolComboBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.schoolComboBox.FormattingEnabled = true;
-            this.schoolComboBox.Location = new System.Drawing.Point(123, 79);
+            this.schoolComboBox.Location = new System.Drawing.Point(271, 102);
             this.schoolComboBox.Name = "schoolComboBox";
             this.schoolComboBox.Size = new System.Drawing.Size(161, 21);
             this.schoolComboBox.TabIndex = 3;
@@ -246,7 +249,7 @@
             // 
             // createNewSessionButton
             // 
-            this.createNewSessionButton.Location = new System.Drawing.Point(57, 395);
+            this.createNewSessionButton.Location = new System.Drawing.Point(113, 479);
             this.createNewSessionButton.Name = "createNewSessionButton";
             this.createNewSessionButton.Size = new System.Drawing.Size(341, 23);
             this.createNewSessionButton.TabIndex = 14;
@@ -311,6 +314,7 @@
             // 
             // stationsGroupBox
             // 
+            this.stationsGroupBox.BackColor = System.Drawing.Color.White;
             this.stationsGroupBox.Controls.Add(this.heightAndWeightCheckBox);
             this.stationsGroupBox.Controls.Add(this.scoliosisCheckBox);
             this.stationsGroupBox.Controls.Add(this.bloodPressureCheckBox);
@@ -325,7 +329,7 @@
             this.stationsGroupBox.Controls.Add(this.heartCheckBox);
             this.stationsGroupBox.Controls.Add(this.lungsCheckBox);
             this.stationsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stationsGroupBox.Location = new System.Drawing.Point(57, 143);
+            this.stationsGroupBox.Location = new System.Drawing.Point(57, 182);
             this.stationsGroupBox.Name = "stationsGroupBox";
             this.stationsGroupBox.Size = new System.Drawing.Size(505, 236);
             this.stationsGroupBox.TabIndex = 20;
@@ -336,14 +340,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(684, 662);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(595, 578);
             this.Controls.Add(this.stationsGroupBox);
             this.Controls.Add(this.createNewSessionButton);
             this.Controls.Add(this.schoolComboBox);
             this.Controls.Add(this.countyComboBox);
             this.Controls.Add(this.schoolLabel);
             this.Controls.Add(this.countyLabel);
+            this.MaximumSize = new System.Drawing.Size(611, 616);
+            this.MinimumSize = new System.Drawing.Size(611, 616);
             this.Name = "newSessionScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create New Session";

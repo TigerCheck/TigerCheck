@@ -32,7 +32,7 @@ namespace TigerCheck
     {
         //new SQL Connection object
         SqlConnection _patientRecordsConnection = new SqlConnection(Properties.Settings.Default.TigerCheckProductionConnectionString);
-
+        
         public checkInScreen()
         {
            
@@ -78,15 +78,18 @@ ________________________________________________________________
                     sex = "M";
                 }
 
-                if (femailRadioButton.Checked)
+                if (femaleRadioButton.Checked)
                 {
                     sex = "F";
                 }
 
 
 
-                addPatientToDatabase(firstName, lastName, age, sex, race, barcodeNumber);
-                this.Close();
+                addPatientToDatabase(firstName, lastName, age, sex, race, barcodeNumber);//Have some error handling here just in case
+                resultsTextBox.Text = resultsTextBox.Text + Environment.NewLine + lastName + ", " + firstName + " added successfully";
+                
+                clearTheForm();
+                
 
             } 
         }
@@ -170,7 +173,7 @@ ________________________________________________________________
             }
 
 
-            if (maleRadioButton.Checked == false && femailRadioButton.Checked == false)
+            if (maleRadioButton.Checked == false && femaleRadioButton.Checked == false)
             {
                 isValid = false;
                 MessageBox.Show("No button selected for sex of the patient");
@@ -234,6 +237,36 @@ ________________________________________________________________
             return true;
         }
 
+
+/*
+________________________________________________________________
+clearTheForm
+Date Last Modified: 2/5/2014
+Name: Ethan Darby
+
+Functionality: This function is called afer the patient has been checked in. It clears the values in the form automatically. 
+
+Parameters: No info being passed
+
+Returns: None
+
+Important notes: 
+________________________________________________________________
+*/
+
+        private void clearTheForm()
+        {
+            firstNameTextBox.Clear();
+            lastNameTextBox.Clear();
+            ageComboBox.SelectedIndex = -1;
+            femaleRadioButton.Checked = false;
+            maleRadioButton.Checked = false;
+            raceComboBox.SelectedIndex = -1;
+            barcodeNumberTextbox.Clear();
+
+        }
+
+     
 
     }
 }

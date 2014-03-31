@@ -38,10 +38,11 @@
             this.ageComboBox = new System.Windows.Forms.ComboBox();
             this.sexLabel = new System.Windows.Forms.Label();
             this.maleRadioButton = new System.Windows.Forms.RadioButton();
-            this.femailRadioButton = new System.Windows.Forms.RadioButton();
+            this.femaleRadioButton = new System.Windows.Forms.RadioButton();
             this.raceLabel = new System.Windows.Forms.Label();
             this.raceComboBox = new System.Windows.Forms.ComboBox();
             this.submitButton = new System.Windows.Forms.Button();
+            this.resultsTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // firstNameTextBox
@@ -233,16 +234,16 @@
             this.maleRadioButton.Text = "Male";
             this.maleRadioButton.UseVisualStyleBackColor = true;
             // 
-            // femailRadioButton
+            // femaleRadioButton
             // 
-            this.femailRadioButton.AutoSize = true;
-            this.femailRadioButton.Location = new System.Drawing.Point(286, 225);
-            this.femailRadioButton.Name = "femailRadioButton";
-            this.femailRadioButton.Size = new System.Drawing.Size(59, 17);
-            this.femailRadioButton.TabIndex = 10;
-            this.femailRadioButton.TabStop = true;
-            this.femailRadioButton.Text = "Female";
-            this.femailRadioButton.UseVisualStyleBackColor = true;
+            this.femaleRadioButton.AutoSize = true;
+            this.femaleRadioButton.Location = new System.Drawing.Point(286, 225);
+            this.femaleRadioButton.Name = "femaleRadioButton";
+            this.femaleRadioButton.Size = new System.Drawing.Size(59, 17);
+            this.femaleRadioButton.TabIndex = 10;
+            this.femaleRadioButton.TabStop = true;
+            this.femaleRadioButton.Text = "Female";
+            this.femaleRadioButton.UseVisualStyleBackColor = true;
             // 
             // raceLabel
             // 
@@ -271,16 +272,26 @@
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
+            // resultsTextBox
+            // 
+            this.resultsTextBox.Location = new System.Drawing.Point(12, 463);
+            this.resultsTextBox.Multiline = true;
+            this.resultsTextBox.Name = "resultsTextBox";
+            this.resultsTextBox.Size = new System.Drawing.Size(300, 103);
+            this.resultsTextBox.TabIndex = 14;
+            // 
             // checkInScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(584, 562);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(595, 578);
+            this.Controls.Add(this.resultsTextBox);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.raceComboBox);
             this.Controls.Add(this.raceLabel);
-            this.Controls.Add(this.femailRadioButton);
+            this.Controls.Add(this.femaleRadioButton);
             this.Controls.Add(this.maleRadioButton);
             this.Controls.Add(this.sexLabel);
             this.Controls.Add(this.ageComboBox);
@@ -291,6 +302,8 @@
             this.Controls.Add(this.lastNameLabel);
             this.Controls.Add(this.firstNameLabel);
             this.Controls.Add(this.firstNameTextBox);
+            this.MaximumSize = new System.Drawing.Size(611, 616);
+            this.MinimumSize = new System.Drawing.Size(611, 616);
             this.Name = "checkInScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Check In";
@@ -311,9 +324,10 @@
         private System.Windows.Forms.ComboBox ageComboBox;
         private System.Windows.Forms.Label sexLabel;
         private System.Windows.Forms.RadioButton maleRadioButton;
-        private System.Windows.Forms.RadioButton femailRadioButton;
+        private System.Windows.Forms.RadioButton femaleRadioButton;
         private System.Windows.Forms.Label raceLabel;
         private System.Windows.Forms.ComboBox raceComboBox;
         private System.Windows.Forms.Button submitButton;
+        private System.Windows.Forms.TextBox resultsTextBox;
     }
 }
