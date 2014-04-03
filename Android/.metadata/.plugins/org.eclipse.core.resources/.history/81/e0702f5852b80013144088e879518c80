@@ -1,0 +1,57 @@
+package com.example.tigercheck;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.widget.CheckBox;
+import java.util.Arrays;
+
+public class StationSelect extends Activity {
+
+	public final static int NUMBER_OF_STATIONS = 2;
+	public boolean[] stationArray = new boolean[NUMBER_OF_STATIONS];
+	Arrays.fill(stationArray, Boolean.FALSE);
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_station_select);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.station_select, menu);
+		return true;
+	}
+	
+	public void onCheckboxClick (View view) {
+		
+		boolean checked = ((CheckBox)view).isChecked();
+		
+		switch(view.getId()) {
+		case R.id.checkbox_blood_pressure:
+			if(checked) {
+				//set bool true
+			}
+			else {
+				//set bool false
+			}
+			break;
+		case R.id.checkbox_heart_rate:
+			if(checked) {
+				//set bool true
+			}
+			else {
+				//set bool false
+			}
+			break;
+		}
+	}
+	
+	public void submitButtonPress (View view) {
+		//Intent intent = new Intent(this, Station.class)
+	}
+
+}
