@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".StationSelect" >
+
+    <TextView
+        android:id="@+id/informationTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/station_select_message"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textSize="@dimen/default_font_size" />
+
+    <!-- Checkbox Layout -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <!-- Left Checkbox Column -->
+        <RelativeLayout
+	        android:id="@+id/LeftColumnCheckboxes"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+            android:orientation="vertical">
+	    
+    	    <CheckBox
+    	        android:id="@+id/checkbox_blood_pressure"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:text="@string/checkbox_blood_pressure"
+        	    android:textSize="@dimen/default_font_size"
+        	    android:onClick="onCheckboxClick"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_heart_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkbox_heart_rate"
+                android:textSize="@dimen/default_font_size"
+                android:onClick="onCheckboxClick"
+                android:layout_below="@+id/checkbox_blood_pressure" />
+
+        </RelativeLayout>
+
+        <!-- Right Checkbox Column -->
+	    <RelativeLayout
+	        android:id="@+id/RightColumnCheckboxes"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+	        android:layout_toRightOf="@+id/LeftColumnCheckboxes">
+
+            <CheckBox
+                android:id="@+id/checkbox_heart_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkbox_eye_exam"
+                android:textSize="@dimen/default_font_size"
+                android:onClick="onCheckboxClick" />
+	    
+    	
+	    
+	    </RelativeLayout>
+    </RelativeLayout>
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:onClick="submitButtonPress"
+        android:text="@string/submit_button"
+        android:textSize="24sp"
+        android:id="@+id/button" />
+
+
+
+</RelativeLayout>
