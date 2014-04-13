@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:onClick="changeStations"
+        android:onClick="changeStationsBtnLstr"
         android:text="@string/change_stations_button"
         android:textSize="@dimen/default_font_size" />
 

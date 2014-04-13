@@ -13,13 +13,12 @@ import com.tigercheck.android.app.R;
 
 public class StationSelect extends Activity {
 
-	public ArrayList<String> stationList;
+	public ArrayList<String> stationList = new ArrayList<String>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_station_select);
-		stationList = new ArrayList<String>();
 	}
 
 	@Override
