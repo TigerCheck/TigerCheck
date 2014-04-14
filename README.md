@@ -8,4 +8,4 @@ We ask that all groups follow our coding and documentation standard to keep this
 
 This is a newer version of TigerCheck with more readability for the developers. This version will include a coding standard as well as a documentation standard. TigerCheck v2 will be more modular based. Future senior design groups will be able to easily add features as necessary. This version will be using an installed application in the place of a web app.
 
-This program is using C# and MySQL.
+This program is using C#, SQL, Java, and XML.
