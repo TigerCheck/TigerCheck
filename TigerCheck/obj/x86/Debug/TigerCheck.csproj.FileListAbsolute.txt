@@ -37,3 +37,4 @@ C:\Users\Ethan Darby\Desktop\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.Prop
 C:\Users\Ethan Darby\Desktop\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.csproj.GenerateResource.Cache
 C:\Users\Ethan Darby\Desktop\TigerCheck\TigerCheck\bin\Debug\TigerCheck.exe
 C:\Users\Ethan Darby\Desktop\TigerCheck\TigerCheck\bin\Debug\TigerCheck.pdb
+C:\Users\Ross\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.pdb
