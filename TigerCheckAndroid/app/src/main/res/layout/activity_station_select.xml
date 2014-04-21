@@ -9,79 +9,211 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".StationSelect" >
 
-    <TextView
-        android:id="@+id/informationTextView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/station_select_message"
-        android:layout_alignParentTop="true"
-        android:gravity="center"
-        android:textSize="@dimen/default_font_size" />
-
     <!-- Checkbox Layout -->
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
 
-        <!-- Left Checkbox Column -->
-        <RelativeLayout
-	        android:id="@+id/LeftColumnCheckboxes"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-            android:orientation="vertical">
-	    
-    	    <CheckBox
-    	        android:id="@+id/checkbox_blood_pressure"
-        	    android:layout_width="wrap_content"
-        	    android:layout_height="wrap_content"
-        	    android:text="@string/checkbox_blood_pressure"
-        	    android:textSize="@dimen/default_font_size"
-        	    android:onClick="onCheckboxClick"/>
-
-            <CheckBox
-                android:id="@+id/checkbox_heart_rate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/checkbox_heart_rate"
-                android:textSize="@dimen/default_font_size"
-                android:onClick="onCheckboxClick"
-                android:layout_below="@+id/checkbox_blood_pressure" />
-
-        </RelativeLayout>
-
-        <!-- Right Checkbox Column -->
-	    <RelativeLayout
-	        android:id="@+id/RightColumnCheckboxes"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="20dp"
-	        android:layout_toRightOf="@+id/LeftColumnCheckboxes">
-
-            <CheckBox
-                android:id="@+id/checkbox_heart_rate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/checkbox_eye_exam"
-                android:textSize="@dimen/default_font_size"
-                android:onClick="onCheckboxClick" />
-	    
-    	
-	    
-	    </RelativeLayout>
-    </RelativeLayout>
-    
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:onClick="submitButtonPress"
-        android:text="@string/submit_button"
+        android:text="Enter Different Barcode"
         android:textSize="24sp"
-        android:id="@+id/button" />
+        android:id="@+id/newPatientButton"
+        android:onClick="onStationSelected" />
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="65dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blood Pressure"
+            android:id="@+id/bloodPressureButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Respiration Rate"
+            android:id="@+id/respirationRateButton"
+            android:layout_alignTop="@+id/bloodPressureButton"
+            android:layout_toRightOf="@+id/bloodPressureButton"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Height/Weight"
+            android:id="@+id/heightWeightButton"
+            android:layout_alignTop="@+id/respirationRateButton"
+            android:layout_toRightOf="@+id/respirationRateButton"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blood Sugar"
+            android:id="@+id/bloodSugarButton"
+            android:layout_alignTop="@+id/heightWeightButton"
+            android:layout_toRightOf="@+id/heightWeightButton"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Temperature"
+            android:id="@+id/temperatureButton"
+            android:layout_toRightOf="@+id/bloodSugarButton"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cholesterol"
+            android:id="@+id/cholesterolButton"
+            android:layout_above="@+id/earsButton"
+            android:layout_toLeftOf="@+id/visionButton"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Heart Rate"
+            android:id="@+id/heartRateButton"
+            android:layout_alignTop="@+id/cholesterolButton"
+            android:layout_toRightOf="@+id/cholesterolButton"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scoliosis"
+            android:id="@+id/scoliosisButton"
+            android:layout_alignTop="@+id/heartRateButton"
+            android:layout_toRightOf="@+id/heartRateButton"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lungs"
+            android:id="@+id/lungsButton"
+            android:layout_alignTop="@+id/scoliosisButton"
+            android:layout_toRightOf="@+id/scoliosisButton"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dental"
+            android:id="@+id/dentalButton"
+            android:layout_alignTop="@+id/lungsButton"
+            android:layout_toRightOf="@+id/lungsButton"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/linearLayout3">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nose"
+            android:id="@+id/noseButton"
+            android:layout_alignTop="@+id/throatButton"
+            android:layout_toRightOf="@+id/throatButton"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vision"
+            android:id="@+id/visionButton"
+            android:layout_alignTop="@+id/heartButton"
+            android:layout_toRightOf="@+id/heartButton"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ears"
+            android:id="@+id/earsButton"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:maxWidth="15dp"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Heart"
+            android:id="@+id/heartButton"
+            android:layout_alignTop="@+id/earsButton"
+            android:layout_toRightOf="@+id/earsButton"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Throat"
+            android:id="@+id/throatButton"
+            android:layout_alignTop="@+id/visionButton"
+            android:layout_toRightOf="@+id/visionButton"
+            android:layout_weight="1"
+            android:onClick="onStationSelected" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Select Station You Wish To Collect Data For"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="35dp" />
 
 
 </RelativeLayout>

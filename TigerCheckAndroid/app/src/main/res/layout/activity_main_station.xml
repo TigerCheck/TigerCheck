@@ -19,17 +19,18 @@
             android:id="@+id/barcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/barcode_edit_text"
+            android:text="@string/barcode_edit_text"
             android:textSize="@dimen/default_font_size"
-            android:inputType="number" />
-    
+            android:inputType="text" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/submit_button"
             android:textSize="@dimen/default_font_size"
             android:layout_toRightOf="@+id/barcode"
-            android:onClick="checkBarcode"/>
+            android:id="@+id/submitButton"
+            android:onClick="onMainStationSubmit" />"
     </RelativeLayout>
 
     <!-- Button that allows user to change stations -->
@@ -39,7 +40,7 @@
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:onClick="changeStationsBtnLstr"
-        android:text="@string/change_stations_button"
+        android:text="Exit Program"
         android:textSize="@dimen/default_font_size" />
 
 </RelativeLayout>

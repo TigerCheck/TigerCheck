@@ -21,9 +21,10 @@ public class WelcomeScreen extends Activity {
 		getMenuInflater().inflate(R.menu.welcome_screen, menu);
 		return true;
 	}
-	
+
+    // Change Back to (this, StationSelect.class) when done testing
 	public void continueButtonPress(View view) {
-		Intent intent = new Intent(this, StationSelect.class);
+		Intent intent = new Intent(this, MainStation.class);
 		startActivity(intent);
 		finish();
 	}

@@ -20,32 +20,77 @@ public class StationSelect extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_station_select);
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.station_select, menu);
-		return true;
-	}
 	
-	public void onCheckboxClick (View view) {
-		
-		boolean checked = ((CheckBox)view).isChecked();
-		
-		if(checked) {
-			stationList.add(Integer.toString(view.getId()));
-		}
-		else {
-			stationList.remove(Integer.toString(view.getId()));
-		}
-	}
-	
-	public void submitButtonPress (View view) {
-
-		Intent intent = new Intent(this, MainStation.class);
-		intent.putStringArrayListExtra("key", stationList);
-		startActivity(intent);
-		finish();
+	public void onStationSelected (View v)
+    {
+        Intent intent;
+        switch(v.getId())
+        {
+            case R.id.bloodPressureButton:
+                intent = new Intent(this, BloodPressure.class);
+                startActivity(intent);
+                break;
+            case R.id.respirationRateButton:
+                intent = new Intent(this, RespirationRate.class);
+                startActivity(intent);
+                break;
+            case R.id.heightWeightButton:
+                intent = new Intent(this, HeightWeight.class);
+                startActivity(intent);
+                break;
+            case R.id.bloodSugarButton:
+                intent = new Intent(this, BloodSugar.class);
+                startActivity(intent);
+                break;
+            case R.id.temperatureButton:
+                intent = new Intent(this, Temperature.class);
+                startActivity(intent);
+                break;
+            case R.id.cholesterolButton:
+                intent = new Intent(this, Cholesterol.class);
+                startActivity(intent);
+                break;
+            case R.id.heartRateButton:
+                intent = new Intent(this, HeartRate.class);
+                startActivity(intent);
+                break;
+            case R.id.scoliosisButton:
+                intent = new Intent(this, Scoliosis.class);
+                startActivity(intent);
+                break;
+            case R.id.lungsButton:
+                intent = new Intent(this, Lungs.class);
+                startActivity(intent);
+                break;
+            case R.id.dentalButton:
+                intent = new Intent(this, Dental.class);
+                startActivity(intent);
+                break;
+            case R.id.noseButton:
+                intent = new Intent(this, Nose.class);
+                startActivity(intent);
+                break;
+            case R.id.visionButton:
+                intent = new Intent(this, Vision.class);
+                startActivity(intent);
+                break;
+            case R.id.earsButton:
+                intent = new Intent(this, Ears.class);
+                startActivity(intent);
+                break;
+            case R.id.heartButton:
+                intent = new Intent(this, Heart.class);
+                startActivity(intent);
+                break;
+            case R.id.throatButton:
+                intent = new Intent(this, Throat.class);
+                startActivity(intent);
+                break;
+            case R.id.newPatientButton:
+                intent = new Intent(this, MainStation.class);
+                startActivity(intent);
+                break;
+        }
 	}
 
 }
