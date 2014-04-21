@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tigercheck.android.app" >
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="android.hardware.camera"/>
-    <uses-feature android:name="android.hardware.camera.autofocus"/>
 
     <application
         android:allowBackup="true"
@@ -11,6 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.WelcomeScreen"
             android:label="@string/app_name" >
             <intent-filter>
@@ -20,12 +18,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.StationSelect"
             android:label="@string/title_activity_station_select" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.MainStation"
-            android:label="@string/title_activity_main_station" >
+            android:label="@string/app_name" >
         </activity>
     </application>
 
