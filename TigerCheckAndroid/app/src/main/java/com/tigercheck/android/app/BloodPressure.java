@@ -1,3 +1,16 @@
+/*
+-----------------------------------------------------------------------------
+BloodPressure.java
+Date Created: 4/20/2014
+Date Last Modified: 4/22/2014
+Author of Last Change: Nick Bean
+
+Function: This is the station for entering Blood Pressure data.
+
+Important Notes:
+-----------------------------------------------------------------------------
+*/
+
 package com.tigercheck.android.app;
 
 import android.support.v7.app.ActionBarActivity;
@@ -11,18 +24,37 @@ import android.util.Log;
 
 public class BloodPressure extends ActionBarActivity {
 
+    // These two variables are used to store the data
     Button mButton;
     EditText mEdit;
+
+/*
+________________________________________________________________
+onCreate
+Date Last Modified: 4/22/2014
+Name: Nick Bean
+
+Functionality: This is called when the activity is created. Takes bundle from last
+activity and creates a variable with the contents. It also listens for the submit
+button to be clicked, which would then submit the data to the database.
+
+Parameters: None
+
+Returns: None
+
+Important notes: This is a default code segment created with a little customization.
+________________________________________________________________
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blood_pressure);
 
+        // This is where the code for listening for the submit button starts
+        // once clicked it records the data in the editText field
         mButton = (Button)findViewById(R.id.button);
         mEdit = (EditText)findViewById(R.id.editText);
 
-        // Here is a listener I use to collect the data instead of using the xml onClick
-        // No real reason for chosing this over the other just what I did.
         mButton.setOnClickListener(
             new View.OnClickListener()
             {
@@ -35,7 +67,21 @@ public class BloodPressure extends ActionBarActivity {
         );
     }
 
+/*
+________________________________________________________________
+onCreateOptionsMenu
+Date Last Modified: 4/22/2014
+Name: Nick Bean
 
+Functionality: Creates settings menu
+
+Parameters: None
+
+Returns: None
+
+Important notes: Not used. Created by default.
+________________________________________________________________
+*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         
@@ -44,6 +90,22 @@ public class BloodPressure extends ActionBarActivity {
         return true;
     }
 
+
+/*
+________________________________________________________________
+onOptionsItemSelected
+Date Last Modified: 4/22/2014
+Name: Nick Bean
+
+Functionality: I don't know, its created by default.
+
+Parameters: None
+
+Returns: None
+
+Important notes: May not be used, but is created by default.
+________________________________________________________________
+*/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

@@ -1,3 +1,16 @@
+/*
+-----------------------------------------------------------------------------
+Ears.java
+Date Created: 4/20/2014
+Date Last Modified: 4/22/2014
+Author of Last Change: Nick Bean
+
+Function: This is the station for entering Ear data.
+
+Important Notes:
+-----------------------------------------------------------------------------
+*/
+
 package com.tigercheck.android.app;
 
 import android.support.v7.app.ActionBarActivity;
@@ -7,6 +20,23 @@ import android.view.MenuItem;
 
 public class Ears extends ActionBarActivity {
 
+/*
+________________________________________________________________
+onCreate
+Date Last Modified: 4/22/2014
+Name: Nick Bean
+
+Functionality: This is called when the activity is created. Takes bundle from last
+activity and creates a variable with the contents. It also listens for the submit
+button to be clicked, which would then submit the data to the database.
+
+Parameters: None
+
+Returns: None
+
+Important notes: This is a default code segment created with a little customization.
+________________________________________________________________
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,6 +44,21 @@ public class Ears extends ActionBarActivity {
     }
 
 
+/*
+________________________________________________________________
+onCreateOptionsMenu
+Date Last Modified: 4/22/2014
+Name: Nick Bean
+
+Functionality: Creates settings menu
+
+Parameters: None
+
+Returns: None
+
+Important notes: Not used. Created by default.
+________________________________________________________________
+*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         
@@ -22,6 +67,21 @@ public class Ears extends ActionBarActivity {
         return true;
     }
 
+/*
+________________________________________________________________
+onOptionsItemSelected
+Date Last Modified: 4/22/2014
+Name: Nick Bean
+
+Functionality: I don't know, its created by default.
+
+Parameters: None
+
+Returns: None
+
+Important notes: May not be used, but is created by default.
+________________________________________________________________
+*/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

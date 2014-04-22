@@ -14,9 +14,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Ears"
         android:id="@+id/textView"
+        android:textSize="50dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="50dp" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -24,8 +24,8 @@
         android:id="@+id/editText"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
-        android:hint="Enter Ear Data Here" />
+        android:hint="Enter Ear Data Here"
+        android:layout_marginTop="47dp" />
 
     <Button
         android:layout_width="wrap_content"

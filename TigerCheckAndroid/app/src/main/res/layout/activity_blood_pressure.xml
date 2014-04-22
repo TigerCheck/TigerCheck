@@ -14,20 +14,20 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Blood Pressure"
         android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:textIsSelectable="true"
-        android:textSize="50dp" />
+        android:textSize="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:hint="Enter Blood Pressure Here"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
-        android:layout_marginTop="58dp"
-        android:layout_below="@+id/textView"
+        android:singleLine="false"
+        android:layout_above="@+id/button"
         android:layout_centerHorizontal="true"
-        android:singleLine="false" />
+        android:layout_marginBottom="47dp" />
 
     <Button
         android:layout_width="wrap_content"

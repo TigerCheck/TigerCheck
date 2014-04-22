@@ -38,3 +38,6 @@ C:\Users\Ethan Darby\Desktop\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.cspr
 C:\Users\Ethan Darby\Desktop\TigerCheck\TigerCheck\bin\Debug\TigerCheck.exe
 C:\Users\Ethan Darby\Desktop\TigerCheck\TigerCheck\bin\Debug\TigerCheck.pdb
 C:\Users\Ross\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.pdb
+C:\Users\nlb00_000\Documents\GitHub\TigerCheck\TigerCheck\bin\Debug\TigerCheck.exe.config
+C:\Users\nlb00_000\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.exe
+C:\Users\nlb00_000\Documents\GitHub\TigerCheck\TigerCheck\obj\x86\Debug\TigerCheck.pdb

@@ -25,7 +25,7 @@
         android:id="@+id/editText"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="57dp" />
+        android:layout_marginTop="47dp" />
 
     <Button
         android:layout_width="wrap_content"
