@@ -176,7 +176,7 @@ Returns: boolean stating whether or not the barcode exists in the database
 Important notes:
 ________________________________________________________________
 */
-    public boolean checkBarcode(View view) {
+    public void checkBarcode(View view) {
         //check and set
         boolean barcodeExists = false;
         if(connectToDatabase()) {
@@ -202,7 +202,6 @@ ________________________________________________________________
                 barcodeExists = false;
             }
         }
-        return barcodeExists;
     }
 
 /*
@@ -243,7 +242,7 @@ ________________________________________________________________
         Date Last Modified: 4/7/2014
         Name: Zach White
 
-        Functionality: Returns to the change stations activity
+        Functionality: Goes to the station select screen
 
         Parameters: None
 
@@ -255,7 +254,7 @@ ________________________________________________________________
     public void changeStationsBtnLstr (View view) {
 		Intent intent = new Intent(this, StationSelect.class);
 		startActivity(intent);
-		finish();
+		//finish();
 	}
 
     /*

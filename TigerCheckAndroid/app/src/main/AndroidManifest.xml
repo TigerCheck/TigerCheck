@@ -13,6 +13,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.WelcomeScreen"
             android:label="@string/app_name" >
             <intent-filter>
@@ -22,74 +23,92 @@
             </intent-filter>
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.StationSelect"
             android:label="@string/title_activity_station_select" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.MainStation"
             android:label="@string/title_activity_main_station" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.BloodPressure"
             android:label="@string/title_activity_blood_pressure" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.RespirationRate"
             android:label="@string/title_activity_respiration_rate" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.HeightWeight"
             android:label="@string/title_activity_height_weight" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.BloodSugar"
             android:label="@string/title_activity_blood_sugar" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.Temperature"
             android:label="@string/title_activity_temperature" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.Cholesterol"
             android:label="@string/title_activity_cholesterol" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.HeartRate"
             android:label="@string/title_activity_heart_rate" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.Scoliosis"
             android:label="@string/title_activity_scoliosis" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.Lungs"
             android:label="@string/title_activity_lungs" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.Dental"
             android:label="@string/title_activity_dental" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.Ears"
             android:label="@string/title_activity_ears" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.Heart"
             android:label="@string/title_activity_heart" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.Vision"
             android:label="@string/title_activity_vision" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.Throat"
             android:label="@string/title_activity_throat" >
         </activity>
         <activity
+            android:screenOrientation="landscape"
             android:name="com.tigercheck.android.app.Nose"
             android:label="@string/title_activity_nose" >
         </activity>
