@@ -13,12 +13,22 @@ Important Notes:
 
 package com.tigercheck.android.app;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 public class HeightWeight extends ActionBarActivity {
+
+    // Used for storing the data from the editText field.
+    private EditText heightEdit;
+    private EditText weightEdit;
 
 /*
 ________________________________________________________________
@@ -27,8 +37,7 @@ Date Last Modified: 4/22/2014
 Name: Nick Bean
 
 Functionality: This is called when the activity is created. Takes bundle from last
-activity and creates a variable with the contents. It also listens for the submit
-button to be clicked, which would then submit the data to the database.
+activity and creates a variable with the contents.
 
 Parameters: None
 
@@ -92,6 +101,55 @@ ________________________________________________________________
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    /*
+________________________________________________________________
+heightWeightSubmitted
+Date Last Modified: 4/22/2014
+Name: Nick Bean
+
+Functionality: This method is called by the XML code when the submit
+    button is clicked. It validates the input then submits it to the
+    database
+
+Parameters: None
+
+Returns: None
+
+Important notes: This is much cleaner looking than using a listener
+    in the onCreate method in my opinion
+________________________________________________________________
+*/
+    public void heightWeightSubmitted(View v)
+    {
+        heightEdit = (EditText)findViewById(R.id.editText);
+        weightEdit = (EditText)findViewById(R.id.editText2);
+
+        // Setting up alert message for if invalid data is submitted
+        final AlertDialog alert = new AlertDialog.Builder(this).create();
+        alert.setTitle("Invalid");
+        alert.setMessage("Invalid Input");
+        alert.setButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+
+        // Checking for valid input
+        if(heightEdit.getText().toString().matches("") ||weightEdit.getText().toString().matches(""))
+        {
+            alert.show();
+        }
+        else
+        {
+            // This is where we need to add the call to the database.
+            Log.v("EditText", heightEdit.getText().toString());
+            Log.v("EditText2",weightEdit.getText().toString());
+            Intent intent = new Intent(this, StationSelect.class);
+            startActivity(intent);
+        }
     }
 
 }

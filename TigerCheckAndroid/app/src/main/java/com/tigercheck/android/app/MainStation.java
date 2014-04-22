@@ -52,7 +52,7 @@ Parameters: None
 
 Returns: None
 
-Important notes: The bundle isn't needed fo now since we are changing the way stations
+Important notes: The bundle isn't needed for now since we are changing the way stations
 are being called
 ________________________________________________________________
 */
@@ -60,18 +60,6 @@ ________________________________________________________________
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_station);
-		
-		Intent intent = getIntent();
-		ArrayList<String> stationList = new ArrayList<String>();
-		stationList = intent.getStringArrayListExtra("key");
-		
-		//Do call barcode scanning activity
-
-
-        //Call Main station again to go scan a new student
-			//intent = new Intent(this, MainStation.class);
-			//startActivity(intent);
-			//finish();
 	}
 
 /*
@@ -111,7 +99,6 @@ Returns: Boolean stating whether or not the app has made connection
 Important notes:
 ________________________________________________________________
 */
-
     public boolean connectToDatabase() {
         boolean connectionSucceeded = false;
 
@@ -136,7 +123,6 @@ ________________________________________________________________
         }
         return connectionSucceeded;
     }
-
 /*
 ________________________________________________________________
 connectToDatabase
@@ -203,7 +189,6 @@ ________________________________________________________________
             }
         }
     }
-
 /*
 ________________________________________________________________
 goThroughStations
@@ -236,25 +221,47 @@ ________________________________________________________________
         //}
     }
 
-    /*
-        ________________________________________________________________
-        changeStationsBtnLstr
-        Date Last Modified: 4/7/2014
-        Name: Zach White
+/*
+    ________________________________________________________________
+    exitApplicationClicked
+    Date Last Modified: 4/22/2014
+    Name: Nick Bean
 
-        Functionality: Goes to the station select screen
+    Functionality: Exits application
 
-        Parameters: None
+    Parameters: None
 
-        Returns: None
+    Returns: None
 
-        Important notes:
-        ________________________________________________________________
-        */
-    public void changeStationsBtnLstr (View view) {
-		Intent intent = new Intent(this, StationSelect.class);
-		startActivity(intent);
-		//finish();
+    Important notes: Button size is probably to big might lead to
+        accidental clicks. Have double check alert to be safe.
+        May consider resizing button.
+    ________________________________________________________________
+    */
+    public void exitApplicationClicked (View view) {
+
+        // Setting up alert message to make sure user wants to exit
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Exit Application")
+                .setMessage("Are you sure you wish to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+                        System.exit(0);
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
+
+        // Until database is working comment the above and uncomment the following to test
+        // Intent intent = new Intent(this, StationSelect.class);
+        // startActivity(intent);
 	}
 
     /*
@@ -272,8 +279,11 @@ ________________________________________________________________
     Important notes:
     ________________________________________________________________
     */
+    @Override
     protected void onStop() {
         disconnectFromDatabase();
+
+        super.onStop();
     }
 
 }

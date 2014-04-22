@@ -13,6 +13,9 @@ Important Notes:
 
 package com.tigercheck.android.app;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,9 +27,8 @@ import android.util.Log;
 
 public class BloodPressure extends ActionBarActivity {
 
-    // These two variables are used to store the data
-    Button mButton;
-    EditText mEdit;
+    // Used for storing the data from the editText field.
+    private EditText mEdit;
 
 /*
 ________________________________________________________________
@@ -35,8 +37,7 @@ Date Last Modified: 4/22/2014
 Name: Nick Bean
 
 Functionality: This is called when the activity is created. Takes bundle from last
-activity and creates a variable with the contents. It also listens for the submit
-button to be clicked, which would then submit the data to the database.
+activity and creates a variable with the contents.
 
 Parameters: None
 
@@ -49,22 +50,6 @@ ________________________________________________________________
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blood_pressure);
-
-        // This is where the code for listening for the submit button starts
-        // once clicked it records the data in the editText field
-        mButton = (Button)findViewById(R.id.button);
-        mEdit = (EditText)findViewById(R.id.editText);
-
-        mButton.setOnClickListener(
-            new View.OnClickListener()
-            {
-            public void onClick(View view)
-            {
-                // This is where we need to add the call to the database.
-                Log.v("EditText", mEdit.getText().toString());
-            }
-            }
-        );
     }
 
 /*
@@ -116,5 +101,52 @@ ________________________________________________________________
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+/*
+________________________________________________________________
+bloodPressureSubmitted
+Date Last Modified: 4/22/2014
+Name: Nick Bean
+
+Functionality: This method is called by the XML code when the submit
+    button is clicked. It validates the input then submits it to the
+    database
+
+Parameters: None
+
+Returns: None
+
+Important notes: This is much cleaner looking than using a listener
+    in the onCreate method in my opinion
+________________________________________________________________
+*/
+    public void bloodPressureSubmitted(View v)
+    {
+        mEdit = (EditText)findViewById(R.id.editText);
+
+        // Setting up alert message for if invalid data is submitted
+        final AlertDialog alert = new AlertDialog.Builder(this).create();
+        alert.setTitle("Invalid");
+        alert.setMessage("Invalid Input");
+        alert.setButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+
+        // Checking for valid input
+        if(mEdit.getText().toString().matches(""))
+        {
+            alert.show();
+        }
+        else
+        {
+            // This is where we need to add the call to the database.
+            Log.v("EditText", mEdit.getText().toString());
+            Intent intent = new Intent(this, StationSelect.class);
+            startActivity(intent);
+        }
     }
 }
