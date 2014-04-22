@@ -113,7 +113,7 @@ Functionality: This method is called by the XML code when the submit
     button is clicked. It validates the input then submits it to the
     database
 
-Parameters: None
+Parameters: View v
 
 Returns: None
 
