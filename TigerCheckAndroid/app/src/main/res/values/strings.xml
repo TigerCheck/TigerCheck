@@ -13,6 +13,7 @@
     <string name="submit_button">Submit</string>
     <string name="continue_button">Continue</string>
     <string name="change_stations_button">Change Selected Stations</string>
+    <string name="exit_button">Exit Program</string>
 
     <!-- StationSelect checkbox options -->
     <string name="checkbox_blood_pressure">Blood Pressure</string>
