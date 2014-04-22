@@ -47,7 +47,12 @@ namespace TigerCheck
                {
                     MessageBox.Show("Please enter a number into the box");
                }
-               // Enter SQL call
+               patient.Height = (Convert.ToInt32(HeightInFeetTextBox.Text) * 12 + Convert.ToInt32(HeightInInchesTextBox.Text));
+               patient.updatePatientData("Height");
+               patient.Weight = Convert.ToInt32(WeightTextBox.Text);
+               patient.updatePatientData("WEight");
+               patient.BMI = Convert.ToInt32(WeightTextBox.Text) / (Convert.ToInt32(HeightInFeetTextBox.Text) * 12 + Convert.ToInt32(HeightInInchesTextBox.Text)) ^ 2;
+               patient.updatePatientData("BMI");
                this.Close();
           }
           /*
@@ -99,7 +104,7 @@ namespace TigerCheck
 
                     patient.getPatientData(Convert.ToInt32(barcodeTextBox.Text));
 
-                    HeartRateTextBox.Text = patient.Heart_Rate.ToString();
+                    HeightInFeetTextBox.Text = patient.Height.ToString();
                }
                else
                {

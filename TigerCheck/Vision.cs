@@ -51,7 +51,7 @@ namespace TigerCheck
 
                     patient.getPatientData(Convert.ToInt32(barcodeTextBox.Text));
 
-                    HeartRateTextBox.Text = patient.Heart_Rate.ToString();
+                    VisionTextBox.Text = patient.Vision.ToString();
                }
                else
                {
@@ -125,7 +125,8 @@ namespace TigerCheck
                {
                     MessageBox.Show("Please enter a number into the box");
                }
-               //SQL call
+               patient.Vision = VisionTextBox.Text;
+               patient.updatePatientData("Vision");
                this.Close();
 
           }

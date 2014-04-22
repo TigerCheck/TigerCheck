@@ -92,7 +92,7 @@
                this.barcodePanel.Controls.Add(this.barcodeSubmit);
                this.barcodePanel.Controls.Add(this.barcodeTextBox);
                this.barcodePanel.Controls.Add(this.label1);
-               this.barcodePanel.Location = new System.Drawing.Point(12, 12);
+               this.barcodePanel.Location = new System.Drawing.Point(12, 17);
                this.barcodePanel.Name = "barcodePanel";
                this.barcodePanel.Size = new System.Drawing.Size(462, 193);
                this.barcodePanel.TabIndex = 4;
