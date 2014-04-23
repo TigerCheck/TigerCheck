@@ -113,7 +113,7 @@ ________________________________________________________________
         });
         try {
             Class.forName("net.sourceforge.jtds.jdbc.Driver").newInstance();
-            dbCon = DriverManager.getConnection("jdbc:sqlserver://" + SERVER_ADDRESS + ";user=" + USERNAME + ";password=" + PASSWORD + ";");
+            dbCon = DriverManager.getConnection("jdbc:jtds:sqlserver://" + SERVER_ADDRESS + ";user=" + USERNAME + ";password=" + PASSWORD + ";");
             connectionSucceeded = true;
             Log.w("Connection", "open");
         } catch (Exception e) {
