@@ -189,37 +189,6 @@ ________________________________________________________________
             }
         }
     }
-/*
-________________________________________________________________
-goThroughStations
-Date Last Modified: 4/7/2014
-Name: Zach White
-
-Functionality: Loops through all of the stations passed in by the station select activity
-
-Parameters: array list of the selected stations
-
-Returns: None
-
-Important notes: Currently not used. This will need to be implemented if you change the way
-stations are called
-________________________________________________________________
-*/
-    private void goThroughStations(ArrayList stations) {
-        //Loop through received arraylist and call station activities
-        //int size = stationList.size();
-        //for(int i =0; i < size; i++) {
-        //String check = stationList.get(i);
-        //if(check.equals("R.id.checkbox_blood_Pressure")) {
-        //intent = new Intent(this,BloodPressureStation.class);
-        //startActivity(intent);
-        //}
-        //else if(check.equals("R.id.checkbox_heart_rate")) {
-        //intent = new Intent(this,HeartRateStation.class);
-        //startActivity(intent);
-        //}
-        //}
-    }
 
 /*
     ________________________________________________________________
