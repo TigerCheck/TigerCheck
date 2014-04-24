@@ -143,7 +143,7 @@ ________________________________________________________________
         }
         else
         {
-            // This is where we need to add the call to the database.
+            // This is where we need to add the call to the SQLite database.
             Log.v("EditText", mEdit.getText().toString());
             Intent intent = new Intent(this, StationSelect.class);
             startActivity(intent);
