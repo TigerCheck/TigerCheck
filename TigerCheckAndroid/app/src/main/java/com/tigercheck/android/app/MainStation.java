@@ -19,25 +19,21 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.app.AlertDialog;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
-import java.util.ArrayList;
-
+import android.widget.Toast;
 
 public class MainStation extends Activity {
 
-    static final String SERVER_ADDRESS = "172.17.74.6:80";
-    static final String USERNAME = "sa";
-    static final String PASSWORD = "kidcheck2010";
-    public int patientBarcode;
-    Connection dbCon;
+    // Variables for the SQL server that I kept just to remember them even tho they arent used.
+    //static final String SERVER_ADDRESS = "172.17.74.6:80";
+    //static final String USERNAME = "sa";
+    //static final String PASSWORD = "kidcheck2010";
+
+    // Handler for SQLite database
+    DataHandler handler;
 
 /*
 ________________________________________________________________
@@ -86,6 +82,62 @@ ________________________________________________________________
 
 /*
 ________________________________________________________________
+CheckBarcode
+Date Last Modified: 4/24/2014
+Name: Nick Bean
+
+Functionality: Called when the submit button is pressed to enter the barcode.
+
+Parameters: None
+
+Returns: None
+
+Important notes: This is my attempt at trying to get a SQLite
+    database to work. It kind of does but has a long way to go.
+    It is at least a foundation to build on in the future.
+________________________________________________________________
+*/
+    public void checkBarcode(View view)
+    {
+        EditText barcodeEntry = (EditText) findViewById(R.id.barcode);
+        String barcode = barcodeEntry.getText().toString();
+        handler = new DataHandler(getBaseContext());
+        handler.open();
+        long id = handler.insertData(barcode);
+        Toast.makeText(getBaseContext(), "Data inserted", Toast.LENGTH_LONG).show();
+        handler.close();
+
+        Intent intent = new Intent(this, StationSelect.class);
+        startActivity(intent);
+
+    }
+
+    /*
+    ________________________________________________________________
+    onStop
+    Date Last Modified: 4/20/2014
+    Name: Zach White
+
+    Functionality: calls disconnectFromDatabase() when the activity is destroyed
+
+    Parameters: None
+
+    Returns: None
+
+    Important notes:
+    ________________________________________________________________
+    */
+    @Override
+    protected void onStop() {
+        //disconnectFromDatabase();
+
+        super.onStop();
+    }
+
+// EVERYTHING BEYOND THIS COMMENT IS CODE THAT ZACH WROTE BUT DOESN'T WORK CORRECTLY
+// I MOVED IT DOWN HERE INSTEAD OF DELETING IT SO THAT ZACH'S WORK WASN'T IN VAIN
+/*
+________________________________________________________________
 connectToDatabase
 Date Last Modified: 4/21/2014
 Name: Zach White
@@ -99,6 +151,7 @@ Returns: Boolean stating whether or not the app has made connection
 Important notes:
 ________________________________________________________________
 */
+    /*
     public boolean connectToDatabase() {
         boolean connectionSucceeded = false;
 
@@ -123,6 +176,7 @@ ________________________________________________________________
         }
         return connectionSucceeded;
     }
+    */
 /*
 ________________________________________________________________
 connectToDatabase
@@ -138,6 +192,7 @@ Returns: None
 Important notes:
 ________________________________________________________________
 */
+    /*
     public void disconnectFromDatabase() {
         try {
             dbCon.close();
@@ -146,6 +201,7 @@ ________________________________________________________________
             Log.w("Error closing connection", " " + e.getMessage());
         }
     }
+    */
 
 /*
 ________________________________________________________________
@@ -162,6 +218,7 @@ Returns: boolean stating whether or not the barcode exists in the database
 Important notes:
 ________________________________________________________________
 */
+    /*
     public void checkBarcode(View view) {
         //check and set
         boolean barcodeExists = false;
@@ -189,70 +246,6 @@ ________________________________________________________________
             }
         }
     }
-
-/*
-    ________________________________________________________________
-    exitApplicationClicked
-    Date Last Modified: 4/22/2014
-    Name: Nick Bean
-
-    Functionality: Exits application
-
-    Parameters: None
-
-    Returns: None
-
-    Important notes: Button size is probably to big might lead to
-        accidental clicks. Have double check alert to be safe.
-        May consider resizing button.
-    ________________________________________________________________
     */
-    public void exitApplicationClicked (View view) {
-
-        // Setting up alert message to make sure user wants to exit
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Exit Application")
-                .setMessage("Are you sure you wish to exit?")
-                .setCancelable(false)
-                .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        finish();
-                        System.exit(0);
-                    }
-                })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-        AlertDialog alert = builder.create();
-        alert.show();
-
-        // Until database is working comment the above and uncomment the following to test
-        // Intent intent = new Intent(this, StationSelect.class);
-        // startActivity(intent);
-	}
-
-    /*
-    ________________________________________________________________
-    onStop
-    Date Last Modified: 4/20/2014
-    Name: Zach White
-
-    Functionality: calls disconnectFromDatabase() when the activity is destroyed
-
-    Parameters: None
-
-    Returns: None
-
-    Important notes:
-    ________________________________________________________________
-    */
-    @Override
-    protected void onStop() {
-        disconnectFromDatabase();
-
-        super.onStop();
-    }
 
 }

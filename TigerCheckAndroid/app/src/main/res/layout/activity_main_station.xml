@@ -33,13 +33,5 @@
     </RelativeLayout>
 
     <!-- Button that allows user to change stations -->
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:onClick="exitApplicationClicked"
-        android:text="@string/exit_button"
-        android:textSize="@dimen/default_font_size" />
 
 </RelativeLayout>
