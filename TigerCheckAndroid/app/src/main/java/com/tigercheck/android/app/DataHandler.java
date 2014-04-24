@@ -16,6 +16,8 @@ Important Notes: I followed these tutorials:
     The goal is to store everything in a SQLite table on the android tablet
     and then transfer all that to the SQL server on the laptop somehow, either
     via a PHP/REST/JSON communication or something.
+
+    Sorry this isn't commeneted correctly but I was to pressed for my time.
 -----------------------------------------------------------------------------
 */
 
